@@ -62,6 +62,8 @@ const TestPage = () => {
       return totalScore + (isCorrect ? scorePerQuestion : 0);
     }, 0);
   };
+
+
   const handleAnswerChange = (questionNumber, selectedAnswer) => {
     setAnswers((prevAnswers) => ({
       ...prevAnswers,
@@ -125,7 +127,7 @@ const TestPage = () => {
             <p className="text-xl font-medium text-red-600">
               Thời gian còn lại:{" "}
               <span className="text-xl text-red ">
-                {Math.floor((1200 - elapsedTime) / 60)} phút{" "}
+                {Math.floor((4200 - elapsedTime) / 60)} phút{" "}
                 {(1200 - elapsedTime) % 60} giây
               </span>
             </p>
