@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import De1 from "../../components/JSON/de83.json";
+import Reading from "/Reading.json";
 import Image from "next/image";
 function isImage(url) {
   // Check if the URL ends with specific patterns indicating it's an image
@@ -39,15 +39,18 @@ const TestPage = () => {
     // Select the corresponding question set
     switch (selectedSet) {
       case 1:
-        setQuestionsSet(De1);
+        setQuestionsSet(Reading.Reading83); // Assuming De1 is Reading83
         break;
+        case 2:
+          setQuestionsSet(Reading.Reading84); // Assuming De1 is Reading83
+          break;
       default:
-        setQuestionsSet(De1);
+        setQuestionsSet(Reading.Reading83);
     }
   }, [selectedSet]);
 
   useEffect(() => {
-    setQuestions(De1);
+    setQuestions(Reading.Reading83); // Assuming De1 is Reading83
   }, []);
   // Hàm tính điểm
   const calculateScore = () => {
@@ -118,7 +121,8 @@ const TestPage = () => {
               value={selectedSet}
               onChange={(e) => setSelectedSet(Number(e.target.value))}
             >
-              <option value={1}>Bộ đề 1</option>
+              <option value={1}>Bộ đề 83</option>
+              <option value={2}>Bộ đề 84</option>
               {/* Add more options if needed */}
             </select>
           </div>
@@ -221,7 +225,7 @@ const TestPage = () => {
           </div>
 
           <div className="questions-list flex-1 ml-[280px] mx-4 pl-8 pt-4 pr-8 rounded-md  bg-slate-100">
-            {questionsSet.map((question) => {
+           {questionsSet.map((question) => {
               const questionNumber = question.id;
               const userAnswer = answers[questionNumber];
               const isIncorrect =

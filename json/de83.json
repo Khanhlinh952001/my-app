@@ -1,7 +1,7 @@
 [
     {
       "id": 1,
-      "type":"* [1~2] (___)에 들어갈 말로 가장 알맞은 것을 고르십시다. (각 21점)",
+      "type":"* [1~2] (___)에 들어갈 말로 가장 알맞은 것을 고르십시다. (각 2점)",
       "content": ". 책이 많이 (___) 지식을 쌓을 수 있다.",
       "options": ["읽으면", "읽든지 ", "읽지만", "읽거나"],
       "correctAnswer": "1",
@@ -71,7 +71,7 @@
       "content": "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Screenshot%202024-01-22%20at%201.13.04%E2%80%AFAM.png?alt=media&token=44aa8f96-5adb-415f-b071-1bfc70ab6f3e",
       "options": ["용돈 중 물건 구입비의 비율이 가장 늦았다", "학원비 사용은 교통비보다 두 배 이상 많았다", "대학생들은 용돈의 전반 이상을 식비로 지출했다", "대학생들은 문화생활비보다 교통비를 더 적게 상용했다"],
       "correctAnswer": "3",
-      "solution": "Đang cập nhật...."
+     "solution": "Đang cập nhật...."
     },
     {
       "id": 11,
@@ -384,4 +384,4 @@
        "solution": "Đang cập nhật...."
     }
   ]
-  
+ 
