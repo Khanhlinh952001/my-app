@@ -1,12 +1,13 @@
 {
   "Listen83": [
     {
-      "audio": "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen83%2F%5BLISTENING%20TOPIK%2083%5D%20TOPIK%20%E1%84%83%E1%85%B3%E1%86%AE%E1%84%80%E1%85%B5%2083%E1%84%92%E1%85%AC%20_%20%E1%84%92%E1%85%A1%E1%86%AB%E1%84%80%E1%85%AE%E1%86%A8%E1%84%8B%E1%85%A5%E1%84%82%E1%85%B3%E1%86%BC%E1%84%85%E1%85%A7%E1%86%A8%E1%84%89%E1%85%B5%E1%84%92%E1%85%A5%E1%86%B7%20%E1%84%83%E1%85%B3%E1%86%AE%E1%84%80%E1%85%B5%20%E1%84%8C%E1%85%B5%E1%84%86%E1%85%AE%E1%86%AB%20-%20BA%CC%80I%20NGHE%20TOPIK%20II%20ke%CC%80m%20phu%CC%A3%20%C4%91e%CC%82%CC%80.mp3?alt=media&token=0f332054-0c96-42ed-ba28-7bd54b68d23b"
+      "audio": "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen83%2F%5BLISTENING%20TOPIK%2083%5D%20TOPIK%20%E1%84%83%E1%85%B3%E1%86%AE%E1%84%80%E1%85%B5%2083%E1%84%92%E1%85%AC%20_%20%E1%84%92%E1%85%A1%E1%86%AB%E1%84%80%E1%85%AE%E1%86%A8%E1%84%8B%E1%85%A5%E1%84%82%E1%85%B3%E1%86%BC%E1%84%85%E1%85%A7%E1%86%A8%E1%84%89%E1%85%B5%E1%84%92%E1%85%A5%E1%86%B7%20%E1%84%83%E1%85%B3%E1%86%AE%E1%84%80%E1%85%B5%20%E1%84%8C%E1%85%B5%E1%84%86%E1%85%AE%E1%86%AB%20-%20BA%CC%80I%20NGHE%20TOPIK%20II%20ke%CC%80m%20phu%CC%A3%20%C4%91e%CC%82%CC%80.mp3?alt=media&token=0f332054-0c96-42ed-ba28-7bd54b68d23b",
+      "id": "db4c"
     },
     {
       "id": "1",
       "type": "* [1~2] 다음을 듣고 가장 알맞은 그림 또는 그래프를 고르십시오. (2점)",
-      "content": "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen83%2F%5Bobject%20File%5D?alt=media&token=8880bd9f-b1f7-407f-b0cb-46ece077f9c3",
+      "content": "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen83%2Fea44404c-4a45-45d3-86a2-07e27fa0d12b?alt=media&token=a1684f14-e271-4783-9008-91b1c3aa1ea4",
       "options": [
         "",
         "",
@@ -18,21 +19,21 @@
     },
     {
       "id": "2",
-      "content": "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen83%2F%5Bobject%20File%5D?alt=media&token=556befb2-ca86-4c61-a7a9-46dd1d565a7c",
+      "content": "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen83%2Fc13d8abf-7533-4298-9092-0906074a439a?alt=media&token=665661c8-2367-4ef4-9034-cf27c2faffa1",
       "options": [
         "",
         "",
         "",
         ""
       ],
-      "correctAnswer": "2",
+      "correctAnswer": "1",
       "solution": "Đang cập nhật....",
       "type": ""
     },
     {
       "id": "3",
       "type": "",
-      "content": "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen83%2Fbc1939ef-b51c-4ab5-ad3f-0f851e64750b?alt=media&token=99a6fe97-dd24-42e6-85b0-58133aa957ac",
+      "content": "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen83%2F04d57124-18c7-47a6-8340-40affbcfcd81?alt=media&token=2d193f22-d54c-4450-aeb3-8be5046320fb",
       "options": [
         "",
         "",
@@ -44,134 +45,33 @@
     },
     {
       "id": "4",
-      "content": "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen83?alt=media&token=1edc275a-ad64-48c1-879a-5e8e215ec81c",
+      "content": "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen83%2F57e31820-0388-4bdc-85cb-3895d2f1b3f7?alt=media&token=315a529a-aa10-494b-b23b-76ce8614ba81",
       "options": [
         "",
         "",
         "",
         ""
       ],
-      "correctAnswer": "4",
+      "correctAnswer": "2",
       "solution": "Đang cập nhật....",
       "type": "[4~8] 다음을 듣고  이어질 주 있는 말로 가장 알맞은 것을 고르십시오 . (2점)"
     },
     {
       "id": "5",
       "type": "",
-      "content": "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen83?alt=media&token=f3cf6054-d353-4fbb-ae79-f0c03b62df5b",
+      "content": "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen83%2F59bb21a8-c70e-4901-ba08-0e31344bb879?alt=media&token=ef8e9c38-edce-474d-8f95-5ccb72d39f61",
       "options": [
         "",
         "",
         "",
         ""
       ],
-      "correctAnswer": "3",
+      "correctAnswer": "1",
       "solution": "Đang cập nhật...."
     },
     {
       "id": "6",
-      "content": "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen83?alt=media&token=fb3ff750-6dc8-4a4c-83a4-ec9a781307e4",
-      "options": [
-        "",
-        "",
-        "",
-        ""
-      ],
-      "correctAnswer": "2",
-      "solution": "Đang cập nhật...."
-    },
-    {
-      "id": "7",
-      "content": "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen83?alt=media&token=b8cda42d-fe65-4e1f-b7a1-ab405711fc73",
-      "options": [
-        "",
-        "",
-        "",
-        ""
-      ],
-      "correctAnswer": "2",
-      "solution": "Đang cập nhật...."
-    },
-    {
-      "id": "8",
-      "content": "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen83?alt=media&token=ded2c2c2-d835-40e8-ba0b-fe667666aac8",
-      "options": [
-        "",
-        "",
-        "",
-        ""
-      ],
-      "correctAnswer": "1",
-      "solution": "Đang cập nhật...."
-    },
-    {
-      "id": "9",
-      "type": "* [9~12] 다음을 듣고 여자가 이어서 할 행동으로 가장 알맞은 것을고르십시오 .  (각 2점)",
-      "content": "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen83?alt=media&token=66b3743b-d6dc-4d97-95a8-7c1103bb0e65",
-      "options": [
-        "",
-        "",
-        "",
-        ""
-      ],
-      "correctAnswer": "1",
-      "solution": "Đang cập nhật...."
-    },
-    {
-      "id": "10",
-      "content": "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen83?alt=media&token=aeb96235-3919-4531-829b-be31a7c33b44",
-      "options": [
-        "",
-        "",
-        "",
-        ""
-      ],
-      "correctAnswer": "3",
-      "solution": "Đang cập nhật...."
-    },
-    {
-      "id": "11",
-      "content": "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen83?alt=media&token=27517134-af43-4b72-93af-54b436fac288",
-      "options": [
-        "",
-        "",
-        "",
-        ""
-      ],
-      "correctAnswer": "2",
-      "solution": "Đang cập nhật....",
-      "": "이 작가는 자신의 작품 중 한 편을 골라 심사 대상으로 제출했다"
-    },
-    {
-      "id": "12",
-      "content": "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen83?alt=media&token=9df20b62-0d2e-4584-bc2f-bc7b4b1fd743",
-      "options": [
-        "",
-        "",
-        "",
-        ""
-      ],
-      "correctAnswer": "2",
-      "solution": "Đang cập nhật....",
-      "": "이번 주에는 더 이상 지진이 일어나지 않을 것이다"
-    },
-    {
-      "id": "13",
-      "type": "* [13~16] 다음을 듣고 들은 내용과 같은 것을 고르십시오. (각 2점)",
-      "content": "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen83?alt=media&token=a4a343fa-6370-465b-9a89-000e727028ad",
-      "options": [
-        "",
-        "",
-        "",
-        ""
-      ],
-      "correctAnswer": "1",
-      "solution": "Đang cập nhật....",
-      "": "(다)-(나)-(라)-(가)"
-    },
-    {
-      "id": "14",
-      "content": "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen83?alt=media&token=fe3f3121-a719-4722-8eea-4e5f69589b3f",
+      "content": "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen83%2F10598c29-b896-4209-9955-7abcaba49f90?alt=media&token=bb734b5d-0ab6-4e7d-9b31-b9d82e3d95fe",
       "options": [
         "",
         "",
@@ -179,12 +79,113 @@
         ""
       ],
       "correctAnswer": "4",
+      "solution": "Đang cập nhật...."
+    },
+    {
+      "id": "7",
+      "content": "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen83%2Fa034f933-2bff-4bcb-8f99-e752e82fd4bc?alt=media&token=774b8f76-5dac-49ec-8670-097a292fa8b5",
+      "options": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "correctAnswer": "4",
+      "solution": "Đang cập nhật...."
+    },
+    {
+      "id": "8",
+      "content": "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen83%2Ff18ecac5-f56a-4220-afeb-d6be9f0e915e?alt=media&token=b65b7717-9fec-49bf-ad11-0dbe14ebc7bf",
+      "options": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "correctAnswer": "3",
+      "solution": "Đang cập nhật...."
+    },
+    {
+      "id": "9",
+      "type": "* [9~12] 다음을 듣고 여자가 이어서 할 행동으로 가장 알맞은 것을고르십시오 .  (각 2점)",
+      "content": "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen83%2Fdfa1f96b-6396-4646-8460-c0c7400bd846?alt=media&token=a952833b-0043-4970-a304-af1fd0a43f5f",
+      "options": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "correctAnswer": "3",
+      "solution": "Đang cập nhật...."
+    },
+    {
+      "id": "10",
+      "content": "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen83%2F8173b1e0-aa56-4216-beb0-8589cde614aa?alt=media&token=a3a6f9a3-f271-4d9f-832f-483db5023db5",
+      "options": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "correctAnswer": "1",
+      "solution": "Đang cập nhật...."
+    },
+    {
+      "id": "11",
+      "content": "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen83%2Fc79b9d9d-2236-4a60-b316-263a006924ba?alt=media&token=9d505feb-5512-4639-8457-048381ffe634",
+      "options": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "correctAnswer": "3",
+      "solution": "Đang cập nhật....",
+      "": "이 작가는 자신의 작품 중 한 편을 골라 심사 대상으로 제출했다"
+    },
+    {
+      "id": "12",
+      "content": "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen83%2Fadcae206-4f3f-4688-9bac-400d9bca9c12?alt=media&token=40ee7426-6def-45cb-83f6-345cb42e7b72",
+      "options": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "correctAnswer": "1",
+      "solution": "Đang cập nhật....",
+      "": "이번 주에는 더 이상 지진이 일어나지 않을 것이다"
+    },
+    {
+      "id": "13",
+      "type": "* [13~16] 다음을 듣고 들은 내용과 같은 것을 고르십시오. (각 2점)",
+      "content": "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen83%2F66ac38f1-1f93-4d71-973c-3310ecf4acc6?alt=media&token=a82dd6bf-e0d9-4ec3-a23a-cdba20d55b55",
+      "options": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "correctAnswer": "2",
+      "solution": "Đang cập nhật....",
+      "": "(다)-(나)-(라)-(가)"
+    },
+    {
+      "id": "14",
+      "content": "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen83%2Fbcb08f03-02f3-4017-927d-b8c6ac930f74?alt=media&token=183a1a30-563b-4266-83ef-79aa95024442",
+      "options": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "correctAnswer": "1",
       "solution": "Đang cập nhật....",
       "": "(다)-(나)-(라)-(가)"
     },
     {
       "id": "15",
-      "content": "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen83?alt=media&token=f1b3f495-0f38-4595-a6cd-45454605fa76",
+      "content": "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen83%2Fc7bdfebf-3f1d-4104-b5d3-736a5b7af094?alt=media&token=e05ace74-5132-48c4-8671-166d9432570d",
       "options": [
         "",
         "",
@@ -198,7 +199,20 @@
     {
       "id": "16",
       "type": "",
-      "content": "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen83?alt=media&token=96d379cb-3028-4ba3-a6d8-f8a684674ad1",
+      "content": "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen83%2F663898f6-240a-4f7e-a6c5-b263314d617a?alt=media&token=9cdc6c57-d3cd-4086-ac3f-5629326bc382",
+      "options": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "correctAnswer": "4",
+      "solution": "Đang cập nhật....",
+      "": "특수한 영역을 제한해"
+    },
+    {
+      "id": "17",
+      "content": "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen83%2F2db239f4-5507-484b-9603-032345e546b4?alt=media&token=6632523d-afa6-4eab-9da4-626f9ec040fa",
       "options": [
         "",
         "",
@@ -207,25 +221,12 @@
       ],
       "correctAnswer": "3",
       "solution": "Đang cập nhật....",
-      "": "특수한 영역을 제한해"
-    },
-    {
-      "id": "17",
-      "content": "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen83?alt=media&token=9ad06259-53a9-4eba-ab36-21a18996614f",
-      "options": [
-        "",
-        "",
-        "",
-        ""
-      ],
-      "correctAnswer": "2",
-      "solution": "Đang cập nhật....",
       "type": "[17~20] 다음을 듣고 남자의  중심 생각으로 가장 알맞은  것을 고르십시오 . (2점)",
       "": "발급 방식을 구체적으로"
     },
     {
       "id": "18",
-      "content": "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen83?alt=media&token=0632074c-0c4c-4e5f-b68f-4da28bf16a9a",
+      "content": "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen83%2F91a2b2b2-a7fb-4c18-8d8e-61118119cb1e?alt=media&token=c33aaf48-4bbf-43d2-ac1e-913a36792f1d",
       "options": [
         "",
         "",
@@ -239,20 +240,7 @@
     {
       "id": "19",
       "type": "",
-      "content": "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen83?alt=media&token=b49aeebd-0a2a-4b08-a049-bec716172969",
-      "options": [
-        "",
-        "",
-        "",
-        ""
-      ],
-      "correctAnswer": "4",
-      "solution": "Đang cập nhật....",
-      "": ""
-    },
-    {
-      "id": "20",
-      "content": "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen83?alt=media&token=70ddd8b4-6ac2-40dc-aabe-6cf7d16a0805",
+      "content": "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen83%2F07336ec1-af32-4ac9-afe2-5cf2ccaafb1c?alt=media&token=cf27b3c2-6f86-418c-a94f-97fd6bb9f2b7",
       "options": [
         "",
         "",
@@ -261,13 +249,26 @@
       ],
       "correctAnswer": "1",
       "solution": "Đang cập nhật....",
+      "": ""
+    },
+    {
+      "id": "20",
+      "content": "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen83%2F18e971cf-e97e-4687-bf29-808925fc745f?alt=media&token=4cf8d9cd-7b7f-421c-aaf4-f360232778e1",
+      "options": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "correctAnswer": "3",
+      "solution": "Đang cập nhật....",
       "type": "",
       "": "특이한 제품보다 소비자에게 익숙한 것이 홍보에 더 좋다"
     },
     {
       "id": "21",
       "type": "* [21~22] 다음을 듣고 물음에 답하십시오. (각 2점)",
-      "content": "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen83?alt=media&token=b15f52c4-9344-4077-bd15-1b35c442111e",
+      "content": "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen83%2F0e453e3f-3028-4e1f-aea7-c76c1e2df89d?alt=media&token=d5f166aa-1565-49e5-8f3f-289b2dbdbd3f",
       "options": [
         "",
         "",
@@ -280,34 +281,7 @@
     },
     {
       "id": "22",
-      "content": "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen83?alt=media&token=ed179322-b8e5-40f7-b00d-1598dcc5f552",
-      "options": [
-        "",
-        "",
-        "",
-        ""
-      ],
-      "correctAnswer": "3",
-      "solution": "Đang cập nhật....",
-      "": "소방관이 정신 건강 상담을 받으려면 상담사를 찾아가야 한다."
-    },
-    {
-      "id": "23",
-      "type": "[23~24] 다음을 읽고 물음에 답하십시오. (각 2점)",
-      "content": "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen83?alt=media&token=0ffa9617-268f-4069-a5e3-7f48dd74dfb2",
-      "options": [
-        "",
-        "",
-        "",
-        ""
-      ],
-      "correctAnswer": "1",
-      "solution": "Đang cập nhật....",
-      "": "기쁘고 자랑스럽다"
-    },
-    {
-      "id": "24",
-      "content": "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen83?alt=media&token=0a41319c-50d3-4db1-9c97-5dca06b93348",
+      "content": "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen83%2F56dd425b-b706-4130-9015-aef9af4b2feb?alt=media&token=5f3c0853-8b14-4211-8ed7-b72556545716",
       "options": [
         "",
         "",
@@ -316,12 +290,39 @@
       ],
       "correctAnswer": "4",
       "solution": "Đang cập nhật....",
+      "": "소방관이 정신 건강 상담을 받으려면 상담사를 찾아가야 한다."
+    },
+    {
+      "id": "23",
+      "type": "[23~24] 다음을 읽고 물음에 답하십시오. (각 2점)",
+      "content": "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen83%2F1d91647d-21b8-4289-8faf-af69f4bb3ccd?alt=media&token=f9dc883d-5b47-4f8c-8125-eb3c08f62165",
+      "options": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "correctAnswer": "4",
+      "solution": "Đang cập nhật....",
+      "": "기쁘고 자랑스럽다"
+    },
+    {
+      "id": "24",
+      "content": "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen83%2F1457af7c-7b0f-45d2-a252-14edf1da95d6?alt=media&token=b605edf1-8810-4cbb-8c4d-7f7357d3fdb8",
+      "options": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "correctAnswer": "2",
+      "solution": "Đang cập nhật....",
       "": " 나는 아버지가 자주 가시던 빵집에 가 보려고 한다."
     },
     {
       "id": "25",
       "type": "",
-      "content": "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen83?alt=media&token=2e55dd8c-9af8-42d4-8bfa-87adcf441ae8",
+      "content": "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen83%2Fc9211349-b5a4-46c1-97fd-293acd13c3ad?alt=media&token=4d1c5ff8-001f-4fbf-8f91-01c59db17e3d",
       "options": [
         "",
         "",
@@ -334,34 +335,20 @@
     },
     {
       "id": "26",
-      "content": "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen83?alt=media&token=4ecb8bbe-7f38-4c6e-a0da-ebb7ba0695b5",
+      "content": "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen83%2F086a4009-352e-4283-b773-ef2f1335d92f?alt=media&token=c3e6607c-d500-405d-bcad-626eae29fcd9",
       "options": [
         "",
         "",
         "",
         ""
       ],
-      "correctAnswer": "3",
+      "correctAnswer": "2",
       "solution": "Đang cập nhật....",
       "": "계속된 비에 대중교통 이용자가 한꺼번에 몰리면서 출근길이 혼잡해졌다."
     },
     {
       "id": "27",
-      "content": "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen83?alt=media&token=f9893a27-8be6-4b90-90e2-9129ed1860f9",
-      "options": [
-        "",
-        "",
-        "",
-        ""
-      ],
-      "correctAnswer": "1",
-      "solution": "Đang cập nhật....",
-      "": "온라인 거래 사기 피해자들을 위해 정부가 대책을 마련하겠다고 발표했다."
-    },
-    {
-      "id": "28",
-      "type": "",
-      "content": "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen83?alt=media&token=fdc10f03-97c9-4dba-bbff-c06991287f6e",
+      "content": "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen83%2Fa2eb997b-a00a-400b-b5fc-0f86d909cabb?alt=media&token=14bbee58-5318-474d-91a1-89ca0d267c6f",
       "options": [
         "",
         "",
@@ -370,11 +357,25 @@
       ],
       "correctAnswer": "4",
       "solution": "Đang cập nhật....",
+      "": "온라인 거래 사기 피해자들을 위해 정부가 대책을 마련하겠다고 발표했다."
+    },
+    {
+      "id": "28",
+      "type": "",
+      "content": "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen83%2F928727e5-8c4d-4d17-93d5-c30ed663ea93?alt=media&token=923b148f-620f-4cb7-bea9-659170699e46",
+      "options": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "correctAnswer": "2",
+      "solution": "Đang cập nhật....",
       "": " 한국 편의점을 그대로 재현하는"
     },
     {
       "id": "29",
-      "content": "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen83?alt=media&token=e5ebc509-cce2-47e9-95be-63064a37df06",
+      "content": "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen83%2F6ecabe39-152e-4396-8db3-e7362045cfb7?alt=media&token=237cd878-cd0b-4971-9063-3a3013d6d1c3",
       "options": [
         "",
         "",
@@ -387,46 +388,20 @@
     },
     {
       "id": "30",
-      "content": "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen83?alt=media&token=54c1f4ea-80db-47dd-862d-ba393392d766",
+      "content": "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen83%2Fcf52da53-b669-4665-8280-68a1778b1e82?alt=media&token=8033776b-4a3f-4356-9cef-b79d07f81739",
       "options": [
         "",
         "",
         "",
         ""
       ],
-      "correctAnswer": "3",
+      "correctAnswer": "2",
       "solution": "Đang cập nhật....",
       "": "선수들의 운동복과 구별하려는"
     },
     {
       "id": "31",
-      "content": "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen83?alt=media&token=03ecd324-2f38-4c7b-95ca-7cbb3456e4e3",
-      "options": [
-        "",
-        "",
-        "",
-        ""
-      ],
-      "correctAnswer": "4",
-      "solution": "Đang cập nhật....",
-      "": "자신의 능력을 의심하면서"
-    },
-    {
-      "id": "32",
-      "content": "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen83?alt=media&token=be783f8a-19b6-4fc6-86ee-2b8a2e5a79ee",
-      "options": [
-        "",
-        "",
-        "",
-        ""
-      ],
-      "correctAnswer": "4",
-      "solution": "Đang cập nhật....",
-      "": "오보에는 오케스트라에서 소리를 맞출 때 기준 역할을 한다."
-    },
-    {
-      "id": "33",
-      "content": "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen83?alt=media&token=9d86257c-bcc0-486e-9f46-628ddd551c41",
+      "content": "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen83%2Fd7786cb2-ce7a-446c-be58-d5c89aabe6a3?alt=media&token=44d58721-8c3d-425f-8ac6-8a357734094f",
       "options": [
         "",
         "",
@@ -435,11 +410,24 @@
       ],
       "correctAnswer": "1",
       "solution": "Đang cập nhật....",
-      "": "애기장대는 성장 기간이 길어 유전자 연구에 효율적이다."
+      "": "자신의 능력을 의심하면서"
     },
     {
-      "id": "34",
-      "content": "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen83?alt=media&token=34dd4306-5f82-448e-b748-14949f426447",
+      "id": "32",
+      "content": "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen83%2F7eb80afd-19ab-4bf3-be0f-5a34f7bd1d81?alt=media&token=6f4c3cb1-cbb9-4fc2-a838-4eef4cacd5a6",
+      "options": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "correctAnswer": "3",
+      "solution": "Đang cập nhật....",
+      "": "오보에는 오케스트라에서 소리를 맞출 때 기준 역할을 한다."
+    },
+    {
+      "id": "33",
+      "content": "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen83%2F481f5662-7896-4af1-954e-623568bda7ef?alt=media&token=a3900533-1ab9-486f-a1dd-f307678b853a",
       "options": [
         "",
         "",
@@ -447,12 +435,12 @@
         ""
       ],
       "correctAnswer": "4",
-      "solution": "Đang cập nhật...."
+      "solution": "Đang cập nhật....",
+      "": "애기장대는 성장 기간이 길어 유전자 연구에 효율적이다."
     },
     {
-      "id": "35",
-      "type": "* [35~38] 다음을 읽고 글의 내용과 같은 것을 고르십시오. (각 2점)",
-      "content": "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen83?alt=media&token=0b22d70d-4688-4d98-a2bf-e536fb7f5245",
+      "id": "34",
+      "content": "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen83%2Ff52cefe9-5665-41d4-9339-3251d9e27267?alt=media&token=95d67993-4964-444d-b46e-cc19e1e7b514",
       "options": [
         "",
         "",
@@ -463,8 +451,9 @@
       "solution": "Đang cập nhật...."
     },
     {
-      "id": "36",
-      "content": "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen83?alt=media&token=2cfe3684-a05b-4562-9500-e769ca861a40",
+      "id": "35",
+      "type": "* [35~38] 다음을 읽고 글의 내용과 같은 것을 고르십시오. (각 2점)",
+      "content": "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen83%2Fdeb8b6db-1ca5-4143-88e6-85072c4fe412?alt=media&token=5c9054a8-5a6d-48f6-b041-d680136f4f95",
       "options": [
         "",
         "",
@@ -475,8 +464,20 @@
       "solution": "Đang cập nhật...."
     },
     {
+      "id": "36",
+      "content": "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen83%2F40f4d7cd-865b-42a4-a672-a204d19707cc?alt=media&token=9d654884-3fcf-446f-804b-8f88875704c1",
+      "options": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "correctAnswer": "2",
+      "solution": "Đang cập nhật...."
+    },
+    {
       "id": "37",
-      "content": "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen83?alt=media&token=e7808374-a35b-4377-a8d3-003c5c90868f",
+      "content": "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen83%2Fa47c740d-9194-48bb-87a3-a71dfc1b39d7?alt=media&token=336c8fed-6adc-4dce-aa74-8616a3ece4d2",
       "options": [
         "",
         "",
@@ -488,44 +489,7 @@
     },
     {
       "id": "38",
-      "content": "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen83?alt=media&token=a90c86b3-7a5a-457e-a021-a31de6e1033c",
-      "options": [
-        "",
-        "",
-        "",
-        ""
-      ],
-      "correctAnswer": "2",
-      "solution": "Đang cập nhật...."
-    },
-    {
-      "id": "39",
-      "type": "",
-      "content": "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen83?alt=media&token=5d14d912-82ba-4a9d-88b5-34391cedb32d",
-      "options": [
-        "",
-        "",
-        "",
-        ""
-      ],
-      "correctAnswer": "1",
-      "solution": "Đang cập nhật...."
-    },
-    {
-      "id": "40",
-      "content": "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen83?alt=media&token=916f1051-bb07-42c5-a9c0-d9b85c1448b9",
-      "options": [
-        "",
-        "",
-        "",
-        ""
-      ],
-      "correctAnswer": "2",
-      "solution": "Đang cập nhật...."
-    },
-    {
-      "id": "41",
-      "content": "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen83?alt=media&token=f0e86c26-c226-4104-bd41-7e0f2ef4e75b",
+      "content": "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen83%2F6bde4519-5b00-43da-a705-01bec4aa0614?alt=media&token=560654d9-25f1-4f04-a7a2-81059e08041e",
       "options": [
         "",
         "",
@@ -536,9 +500,46 @@
       "solution": "Đang cập nhật...."
     },
     {
+      "id": "39",
+      "type": "",
+      "content": "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen83%2F4f1674b8-cce5-44d7-b3ec-9684f38a6b72?alt=media&token=13ed213f-bb4c-42d8-a573-7c9cb4cbc3c6",
+      "options": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "correctAnswer": "2",
+      "solution": "Đang cập nhật...."
+    },
+    {
+      "id": "40",
+      "content": "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen83%2Fd7601749-7113-4f85-aa35-525b525ed58f?alt=media&token=ee22d9f4-38f8-40db-af44-2beaafcdf225",
+      "options": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "correctAnswer": "4",
+      "solution": "Đang cập nhật...."
+    },
+    {
+      "id": "41",
+      "content": "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen83%2Fae2da5a5-d24b-4d0f-8c05-bac892d1a3cb?alt=media&token=6e95913c-d186-4c9a-bcb0-dfa51d30df6e",
+      "options": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "correctAnswer": "2",
+      "solution": "Đang cập nhật...."
+    },
+    {
       "id": "42",
       "type": "",
-      "content": "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen83?alt=media&token=dea3894a-157b-4432-993a-87314ab404b0",
+      "content": "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen83%2F25d60ed6-adf7-46a8-9c20-d1e85d2f70c4?alt=media&token=4924f548-8631-405b-bdde-fc8018b296f6",
       "options": [
         "",
         "",
@@ -550,20 +551,20 @@
     },
     {
       "id": "43",
-      "content": "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen83?alt=media&token=52be9377-7177-4d1b-8174-56f72f29ef2f",
+      "content": "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen83%2Fa0551440-ea07-4f74-9b5f-a839f100885e?alt=media&token=1f3a41c4-38cc-4033-b061-1834bb460c55",
       "options": [
         "",
         "",
         "",
         ""
       ],
-      "correctAnswer": "1",
+      "correctAnswer": "3",
       "solution": "Đang cập nhật...."
     },
     {
       "id": "44",
       "type": "",
-      "content": "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen83?alt=media&token=bcce9314-5988-41ad-aabf-3f6c5b8ba247",
+      "content": "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen83%2F38080145-6228-4c84-8f22-d8a372b3781d?alt=media&token=bcbc11b6-3e25-4f12-bc6d-430a33a28cb0",
       "options": [
         "",
         "",
@@ -575,20 +576,7 @@
     },
     {
       "id": "45",
-      "content": "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen83?alt=media&token=4a046d00-17d2-4745-8bd9-072d9c0a6b37",
-      "options": [
-        "",
-        "",
-        "",
-        ""
-      ],
-      "correctAnswer": "4",
-      "solution": "Đang cập nhật...."
-    },
-    {
-      "id": "46",
-      "type": "",
-      "content": "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen83?alt=media&token=f163c599-4b09-4ed4-b4c9-adfb9e7fce36",
+      "content": "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen83%2Fe2aef2ca-c095-443c-9cdb-bd947d800a7f?alt=media&token=143f70a0-3db6-4f19-9e02-eba029991a7d",
       "options": [
         "",
         "",
@@ -599,13 +587,26 @@
       "solution": "Đang cập nhật...."
     },
     {
-      "id": "47",
-      "content": "",
+      "id": "46",
+      "type": "",
+      "content": "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen83%2Fe23d50bb-764d-4a7f-9730-fb4d54e7ddaf?alt=media&token=b06c361f-8bc7-4b95-867a-ae21d57fe8ec",
       "options": [
-        "많은 국가들이 신에너지 개발에 대한 투자를 줄이고 있다.",
-        "과학 정책이 빠르게 변해서 과학 기술이 발전할 수 있었다.",
-        "정부가 우주 산업에 대한 규제를 풀어 성장한 민간 기업이 있다",
-        "우주 개발에 참여 중인 민간 기업이 화성에 호텔을 건설하고 있다."
+        "",
+        "",
+        "",
+        ""
+      ],
+      "correctAnswer": "4",
+      "solution": "Đang cập nhật...."
+    },
+    {
+      "id": "47",
+      "content": "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen83%2Fb6985acd-50e5-4fea-a500-45caf854c347?alt=media&token=2315a097-1f8a-4832-bac6-c933f1ad47ff",
+      "options": [
+        "",
+        "",
+        "",
+        ""
       ],
       "correctAnswer": "3",
       "solution": "Đang cập nhật...."
@@ -613,39 +614,42 @@
     {
       "id": "48",
       "type": "* [48~50] [48~50] 다음을 읽고 물음에 답하십시오. (각 2점)",
-      "content": "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Screenshot%202024-01-23%20at%201.43.33%E2%80%AFAM.png?alt=media&token=bf964559-6078-4a3c-a02c-1f72c08ce5b5",
+      "content": "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen83%2Fb666ffc2-39a3-4b6a-9149-14221976fea9?alt=media&token=84f8e8af-1101-4a20-a8dc-a18bdcf08d84",
       "options": [
-        "행복의 사회적 특성을 파악하려고",
-        "행복을 측정하는 방법을 소개하려고",
-        "행복에 대한 관점의 변화를 유도하려고",
-        "행복이 인간에게 미치는 영향을 분석하려고"
+        "",
+        "",
+        "",
+        ""
       ],
-      "correctAnswer": "3",
-      "solution": "Đang cập nhật...."
+      "correctAnswer": "1",
+      "solution": "Đang cập nhật....",
+      "": "행복이 인간에게 미치는 영향을 분석하려고"
     },
     {
       "id": "49",
-      "content": "",
+      "content": "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen83%2F8700569f-f897-4285-ba1e-087cf6dd59db?alt=media&token=89d28488-3b28-4263-a07c-29460171208f",
       "options": [
-        "개인차가 크지 않다고",
-        "총량이 정해져 있다고",
-        "양상이 매우 다양하다고",
-        "크기가 계속 증가한다고"
+        "",
+        "",
+        "",
+        ""
       ],
-      "correctAnswer": "2",
-      "solution": "Đang cập nhật...."
+      "correctAnswer": "4",
+      "solution": "Đang cập nhật....",
+      "": "크기가 계속 증가한다고"
     },
     {
       "id": "50",
-      "content": "",
+      "content": "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen83%2Fe14b7a3d-5653-483d-b04e-e6ec2baab97b?alt=media&token=9ff5ed9b-f366-4f95-b2d4-be7610cb6d3a",
       "options": [
-        "행복에 대한 사람들의 태도는 대체로 유사하다",
-        "행복은 결혼 여부나 수입 정도의 영향을 많이 받는다.",
-        "행복의 양이 유한하다고 믿는 사람들은 더 많이 행복할 수 있다",
-        "행복이 무한하다고 믿는 사람들은 자신을 남과 잘 비교하지 않는다."
+        "",
+        "",
+        "",
+        ""
       ],
-      "correctAnswer": "4",
-      "solution": "Đang cập nhật...."
+      "correctAnswer": "2",
+      "solution": "Đang cập nhật....",
+      "": "행복이 무한하다고 믿는 사람들은 자신을 남과 잘 비교하지 않는다."
     }
   ],
   "Listen84": []

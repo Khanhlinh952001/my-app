@@ -15,7 +15,7 @@ export default function Home() {
               Thi Nghe
             </button>
           </Link>
-          <Link href='/AddReading'>
+          {/* <Link href='/AddReading'>
             <button className='mt-4 bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-green-600 focus:outline-none focus:ring focus:border-blue-300'>
               AddReading
             </button>
@@ -31,7 +31,7 @@ export default function Home() {
             <button className='mt-4 bg-blue-500 ml-8 text-white py-2 px-4 rounded-md hover:bg-green-600 focus:outline-none focus:ring focus:border-blue-300'>
               Kiem tra tu vung
             </button>
-          </Link>
+          </Link> */}
 
          
         </div>

@@ -103,8 +103,6 @@ const TestPage = () => {
     element.scrollIntoView({ behavior: "smooth" });
   };
 
-
-
   const audioUrl =
     questions && questions.length > 0 ? questions[0].audio : null;
   console.log(audioUrl);
@@ -164,7 +162,6 @@ const TestPage = () => {
                   </h5>
                   <ul className="list-none p-0">
                     {questionsSet.map((question) => (
-                        
                       <li key={question.id} className="mb-2">
                         <button
                           className={"text-black px-4 py-2 rounded "}
@@ -294,8 +291,39 @@ const TestPage = () => {
                     </div>
                   )}
                   <div className="mb-8">
-                    {question.options &&
+                    {question.options && (
+                      <div className="flex flex-row justify-around space-x-4">
+                        {question.options.map((option, optionIndex) => (
+                          <div key={optionIndex} className="flex items-center">
+                            <input
+                              type="checkbox"
+                              name={`q${questionNumber}`}
+                              value={(optionIndex + 1).toString()}
+                              onChange={() =>
+                                handleAnswerChange(
+                                  questionNumber,
+                                  (optionIndex + 1).toString()
+                                )
+                              }
+                              checked={
+                                userAnswer === (optionIndex + 1).toString()
+                              }
+                              className="h-5 w-5 border-gray-300 focus:ring-indigo-500 text-indigo-600"
+                              disabled={showResults}
+                            />
+                            <label className="text-gray-700 text-xl ml-2">
+                              {`. ${optionIndex + 1}   ${option}`}
+                            </label>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+
+                    {/* {question.options &&
                       question.options.map((option, optionIndex) => (
+
+                        <div class="">
+                          
                         <label
                           key={optionIndex}
                           className="block mb-2 pl-12 text-gray-700 text-xl "
@@ -318,7 +346,8 @@ const TestPage = () => {
                           />
                           {`${optionIndex + 1}. ${option}`}{" "}
                         </label>
-                      ))}
+                       </div>
+                      ))} */}
                   </div>
 
                   {showResults && isIncorrect && (
