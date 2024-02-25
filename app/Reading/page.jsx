@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import Reading from "/Reading.json";
-import Image from "next/image";
+import Reading from "../../json/Reading.json";
+
 function isImage(url) {
   // Check if the URL ends with specific patterns indicating it's an image
   return (

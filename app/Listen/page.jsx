@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import Listen from "/Listen.json";
+import Listen from "../../json/Listen.json";
 import Image from "next/image";
 function isImage(url) {
   // Check if the URL is defined and ends with specific patterns indicating it's an image
