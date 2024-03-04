@@ -42,7 +42,7 @@ const TestPage = () => {
         setQuestionsSet(Reading.Reading83); // Assuming De1 is Reading83
         break;
         case 2:
-          setQuestionsSet(Reading.Reading84); // Assuming De1 is Reading83
+          setQuestionsSet(Reading.De1); // Assuming De1 is Reading83
           break;
       default:
         setQuestionsSet(Reading.Reading83);
@@ -122,7 +122,7 @@ const TestPage = () => {
               onChange={(e) => setSelectedSet(Number(e.target.value))}
             >
               <option value={1}>Bộ đề 83</option>
-              <option value={2}>Bộ đề 84</option>
+              <option value={2}>Bộ đề 1</option>
               {/* Add more options if needed */}
             </select>
           </div>
