@@ -508,7 +508,6 @@
     {
       "id": "42",
       "type": "* [42~43] 다음을 읽고 물음에 답하십시오. (각 2점)",
-      "type1": "밑줄 친 부분에 나타난 '부모님'의 심정으로 가장 알맞은 것을 고르십시오.",
       "content": "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Reading83%2F87b44232-9736-4bb2-9145-1bba501d175e?alt=media&token=9046f70b-03b5-4c7b-8104-064b14215b2c",
       "options": [
         "",
@@ -521,7 +520,6 @@
     },
     {
       "id": "43",
-      "type1": " 윗글의 내용으로 알 수 있는 것을 고르십시오.",
       "content": "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Reading83%2F4d076b63-73aa-4130-8b68-b9caf7e6187d?alt=media&token=de40179a-154d-4b41-898c-198e956252d9",
       "options": [
         "",
@@ -535,7 +533,6 @@
     {
       "id": "44",
       "type": "* [44~45] 다음을 읽고 물음에 답하십시오. (각 2점)",
-      "type1": "(___)에 들어갈 말로 가장 알맞은 것을 고르십시오.",
       "content": "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Reading83%2F1646d478-941d-4db9-a25a-ff352241f545?alt=media&token=71883e39-c6f9-4772-a59c-45e9ab8949ea",
       "options": [
         "",
@@ -562,7 +559,6 @@
     {
       "id": "46",
       "type": "* [46~47] 다음을 읽고 물음에 답하십시오. (각 2점)",
-      "type1": "윗글에 나타난 필자의 태도로 가장 알맞은 것을 고르십시오.",
       "content": "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Reading83%2F765d7bb8-b782-48cb-9161-e98305cad678?alt=media&token=7655dcf9-b0bb-4e0a-ad13-eb6f605a3d41",
       "options": [
         "",
@@ -576,7 +572,6 @@
     {
       "id": "47",
       "content": "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Reading83%2F818ca173-b268-44f0-be3a-2e56223ff070?alt=media&token=1539cf1f-6ed4-431b-8cc3-96b7a6382900",
-      "type1": "윗글의 내용과 같은 것을 고르십시오.",
       "options": [
         "",
         "",
@@ -589,7 +584,6 @@
     {
       "id": "48",
       "type": "* [48~50] [48~50] 다음을 읽고 물음에 답하십시오. (각 2점)",
-      "type1": "윗글을 쓴 목적으로 가장 알맞은 것을 고르십시오.",
       "content": "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Reading83%2Fbb6ad93b-b932-43f6-a3a4-b2fc9f01c2d3?alt=media&token=6b672f2d-23c1-43bb-a8cf-3210d117043b",
       "options": [
         "",
@@ -602,7 +596,6 @@
     },
     {
       "id": "49",
-      "type1": "(___)에 들어갈 말로 가장 알맞은 것을 고르십시오.",
       "content": "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Reading83%2F72f9a3cf-6a25-4607-90d4-7a29b2f4a9a0?alt=media&token=88c0db42-c7a4-4072-ae11-70d1469faf50",
       "options": [
         "",
@@ -615,7 +608,6 @@
     },
     {
       "id": "50",
-      "type1": "윗글의 내용과 같은 것을 고르십시오.",
       "content": "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Reading83%2Fcc088f75-20c3-4ee4-83d5-c8b619988e36?alt=media&token=33ebbc98-d217-4f99-b6c0-308a28334b59",
       "options": [
         "",

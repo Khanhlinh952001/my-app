@@ -1,6 +1,9 @@
 "use client";
+
 import React, { useState, useEffect } from "react";
 import Reading from "../../json/Reading.json";
+
+
 
 function isImage(url) {
   // Check if the URL ends with specific patterns indicating it's an image
@@ -11,17 +14,50 @@ function isImage(url) {
   );
 }
 
+const SetSelection = ({ onSelectSet }) => {
+  const [selectedSet, setSelectedSet] = useState(1);
+  return (
+    <div className="bg-[#e1e8f0] h-screen text-align">
+      <div className="flex justify-center items-center h-full">
+        <div className="bg-white p-8 rounded">
+          <h1 className="text-3xl font-bold mb-4 text-black mx-4">
+            Chọn Bộ Đề Trước Khi Thi
+          </h1>
+          <div className="flex justify-around">
+            <select
+            className="border rounded-md text-gray-700 h-10 mt-8 bg-slate-300 p-2"
+            onChange={(e) => onSelectSet(Number(e.target.value))}
+          >
+            <option value={1}>Bộ đề 83</option>
+            <option value={2}>Bộ đề 1</option>
+            {/* Add more options if needed */}
+          </select>
+          <button
+            className="bg-blue-500 text-white px-6 py-3 rounded mt-4 ml-8"
+            onClick={() => onSelectSet(selectedSet)}
+          >
+            Bắt đầu Thi
+          </button>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  );
+};
+
 const TestPage = () => {
+  const [selectedSet, setSelectedSet] = useState(null);
   const [answers, setAnswers] = useState({});
   const [answeredQuestions, setAnsweredQuestions] = useState([]);
   const [showResults, setShowResults] = useState(false);
   const [isCorrect, setIsCorrect] = useState(false);
   const [elapsedTime, setElapsedTime] = useState(0);
   const [questionsSet, setQuestionsSet] = useState([]);
-  const [selectedSet, setSelectedSet] = useState(1);
   const [questions, setQuestions] = useState([]);
   const [showTracking, setShowTracking] = useState(true);
-   const [score, setScore] = useState();
+  const [score, setScore] = useState();
+
   // Countdown timer for 20 minutes
   useEffect(() => {
     let timer;
@@ -39,33 +75,32 @@ const TestPage = () => {
     // Select the corresponding question set
     switch (selectedSet) {
       case 1:
-        setQuestionsSet(Reading.Reading83); // Assuming De1 is Reading83
+        setQuestionsSet(Reading.Reading83);
         break;
-        case 2:
-          setQuestionsSet(Reading.De1); // Assuming De1 is Reading83
-          break;
+      case 2:
+        setQuestionsSet(Reading.De1); // Change this to the correct data source
+        break;
       default:
         setQuestionsSet(Reading.Reading83);
     }
   }, [selectedSet]);
 
   useEffect(() => {
-    setQuestions(Reading.Reading83); // Assuming De1 is Reading83
-  }, []);
+    // Set questions based on the selected set
+    setQuestions(questionsSet);
+  }, [questionsSet]);
+
   // Hàm tính điểm
   const calculateScore = () => {
     const scorePerQuestion = 2; // Số điểm cho mỗi câu trả lời đúng
     return answeredQuestions.reduce((totalScore, questionNumber) => {
       const userAnswer = answers[questionNumber];
-      const correctAnswer = questions.find(
-        (q) => q.id === questionNumber
-      )?.correctAnswer;
+      const correctAnswer = questions.find((q) => q.id === questionNumber)?.correctAnswer;
       const isCorrect = userAnswer === correctAnswer;
 
       return totalScore + (isCorrect ? scorePerQuestion : 0);
     }, 0);
   };
-
 
   const handleAnswerChange = (questionNumber, selectedAnswer) => {
     setAnswers((prevAnswers) => ({
@@ -74,10 +109,7 @@ const TestPage = () => {
     }));
 
     if (!answeredQuestions.includes(questionNumber)) {
-      setAnsweredQuestions((prevQuestions) => [
-        ...prevQuestions,
-        questionNumber,
-      ]);
+      setAnsweredQuestions((prevQuestions) => [...prevQuestions, questionNumber]);
     }
   };
 
@@ -87,15 +119,13 @@ const TestPage = () => {
 
     const incorrectQuestions = answeredQuestions.filter((questionNumber) => {
       const userAnswer = answers[questionNumber];
-      const correctAnswer = questions.find(
-        (q) => q.id === questionNumber
-      )?.correctAnswer;
+      const correctAnswer = questions.find((q) => q.id === questionNumber)?.correctAnswer;
       return userAnswer !== correctAnswer;
     });
 
     const scores = calculateScore(); // Tính điểm
     alert(scores);
-    setScore(scores)
+    setScore(scores);
     setIsCorrect(incorrectQuestions.length === 0);
   };
 
@@ -103,6 +133,10 @@ const TestPage = () => {
     const element = document.getElementById(`question${questionNumber}`);
     element.scrollIntoView({ behavior: "smooth" });
   };
+
+  if (!selectedSet) {
+    return <SetSelection onSelectSet={setSelectedSet} />;
+  }
 
   return (
     <div className="bg-[#e1e8f0] h-full text-align">
@@ -113,18 +147,10 @@ const TestPage = () => {
           </h1>
 
           <div className="mb-4 ">
-            <label className="block text-2xl font-medium mt-1 mr-2 text-gray-700 ">
-              제회
-            </label>
-            <select
-              className="border rounded-md text-gray-700 h-10 bg-slate-300  p-2"
-              value={selectedSet}
-              onChange={(e) => setSelectedSet(Number(e.target.value))}
-            >
-              <option value={1}>Bộ đề 83</option>
-              <option value={2}>Bộ đề 1</option>
-              {/* Add more options if needed */}
-            </select>
+            <h3 className="block text-2xl font-medium mt-1 mr-2 text-gray-700 ">
+            {selectedSet === 1 ? "83" : "1"} 제회 
+            </h3>
+          
           </div>
 
           <div className="mt-4 text-center mb-2">
@@ -194,7 +220,6 @@ const TestPage = () => {
                               }
                             >
                               Câu {questionNumber}
-                              {/* {answers[questionNumber]} */}
                             </button>
                             {answers[questionNumber] && (
                               <span className="ml-1 mt-1 w-[180px] mr-1 text-gray-600">
