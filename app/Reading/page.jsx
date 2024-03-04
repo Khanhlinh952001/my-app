@@ -141,7 +141,7 @@ const TestPage = () => {
       <div>
         <div className="flex  ">
           <div className="w-[280px]  h-full fixed top-4 overflow-y-auto  ">
-            <div className="bg-white pb-10 mx-2 rounded-md mr-2">
+            <div className=" bg-slate-100 pb-10 mx-2 rounded-md mr-2">
               {showTracking && (
                 <div className="text-center">
                   <h5 className="text-[18px] font-medium mb-2 text-gray-800">
@@ -224,7 +224,7 @@ const TestPage = () => {
             </div>
           </div>
 
-          <div className="questions-list flex-1 ml-[280px] mx-4 pl-8 pt-4 pr-8 rounded-md  bg-slate-100">
+          <div className="questions-list flex-1 ml-[280px] mx-4 pl-8 pt-4 pr-8 rounded-md">
            {questionsSet.map((question) => {
               const questionNumber = question.id;
               const userAnswer = answers[questionNumber];
@@ -235,7 +235,7 @@ const TestPage = () => {
                 <div
                   key={questionNumber}
                   id={`question${questionNumber}`}
-                  className="mb-6 bg-white pl-6 pr-6 pb-6 pt-1  rounded-xl"
+                  className="mb-6 bg-slate-100 pl-6 pr-6 pb-6 pt-1  rounded-xl "
                 >
                   <h1 className="mb-2 text-black text-2xl mt-4">
                     {question.type}
@@ -248,16 +248,16 @@ const TestPage = () => {
                           {question.id}.{" "}
                         </p>
                         <img
-                        style={{width:'700px'}}
+                        style={{width:'800px'}}
                           src={question.content}
                           alt={`Câu hỏi ${questionNumber}`}
-                          className="mb-2 ml-10"
+                          className="mb-2 ml-10 p-4 bg-white rounded-xl"
                         />
                        <h2 className="mb-2 text-black text-xl mt-4">{question.type1}</h2>
                       </div>
                     </div>
                   ) : (
-                    <div className="">
+                    <div className="flex">
                     <p className="mb-2 text-black text-xl mt-4 pl-4 py-2 rounded-2xl flex">
                       {question.id}.
                       {question.content ? (
@@ -269,7 +269,7 @@ const TestPage = () => {
                   </div>
                   
                   )}
-                  <div className="mb-8">
+                  <div className="mb-8 flex">
                     {question.options.map((option, optionIndex) => (
                       <label
                         key={optionIndex}
@@ -286,7 +286,7 @@ const TestPage = () => {
                             )
                           }
                           checked={userAnswer === (optionIndex + 1).toString()}
-                          className="mr-2"
+                          className="mr-2 h-4 w-4 border-gray-300 focus:ring-indigo-500 text-indigo-600"
                           disabled={showResults} // Disable radio buttons after submitting
                         />
                         {`${optionIndex + 1}. ${option}`}{" "}

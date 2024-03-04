@@ -308,7 +308,7 @@ const TestPage = () => {
                               checked={
                                 userAnswer === (optionIndex + 1).toString()
                               }
-                              className="h-5 w-5 border-gray-300 focus:ring-indigo-500 text-indigo-600"
+                             className="h-5 w-5 border-gray-300 focus:ring-indigo-500 text-indigo-600"
                               disabled={showResults}
                             />
                             <label className="text-gray-700 text-xl ml-2">
