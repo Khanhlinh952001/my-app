@@ -3,8 +3,6 @@
 import React, { useState, useEffect } from "react";
 import Reading from "../../json/Reading.json";
 
-
-
 function isImage(url) {
   // Check if the URL ends with specific patterns indicating it's an image
   return (
@@ -16,6 +14,7 @@ function isImage(url) {
 
 const SetSelection = ({ onSelectSet }) => {
   const [selectedSet, setSelectedSet] = useState(1);
+
   return (
     <div className="bg-[#e1e8f0] h-screen text-align">
       <div className="flex justify-center items-center h-full">
@@ -25,21 +24,22 @@ const SetSelection = ({ onSelectSet }) => {
           </h1>
           <div className="flex justify-around">
             <select
-            className="border rounded-md text-gray-700 h-10 mt-8 bg-slate-300 p-2"
-            onChange={(e) => onSelectSet(Number(e.target.value))}
-          >
-            <option value={1}>Bộ đề 83</option>
-            <option value={2}>Bộ đề 1</option>
-            {/* Add more options if needed */}
-          </select>
-          <button
-            className="bg-blue-500 text-white px-6 py-3 rounded mt-4 ml-8"
-            onClick={() => onSelectSet(selectedSet)}
-          >
-            Bắt đầu Thi
-          </button>
+              className="border rounded-md text-gray-700 h-10 mt-8 bg-slate-300 p-2"
+              onChange={(e) => onSelectSet(Number(e.target.value))}
+            >
+              <option value={1}>Bộ đề 83</option>
+              <option value={2}>Bộ đề 1</option>
+              <option value={3}>Bộ đề 2</option>
+              <option value={4}>Bộ đề 3</option>
+              {/* Add more options if needed */}
+            </select>
+            <button
+              className="bg-blue-500 text-white px-6 py-3 rounded mt-4 ml-8"
+              onClick={() => onSelectSet(selectedSet)}
+            >
+              Bắt đầu Thi
+            </button>
           </div>
-          
         </div>
       </div>
     </div>
@@ -47,6 +47,7 @@ const SetSelection = ({ onSelectSet }) => {
 };
 
 const TestPage = () => {
+  const [expanded, setExpanded] = useState(false);
   const [selectedSet, setSelectedSet] = useState(null);
   const [answers, setAnswers] = useState({});
   const [answeredQuestions, setAnsweredQuestions] = useState([]);
@@ -57,17 +58,31 @@ const TestPage = () => {
   const [questions, setQuestions] = useState([]);
   const [showTracking, setShowTracking] = useState(true);
   const [score, setScore] = useState();
+  
+  const handleClick = () => {
+    // Đảo ngược giá trị của trạng thái expanded khi click
+    setExpanded(!expanded);
+  };
 
   // Countdown timer for 20 minutes
   useEffect(() => {
     let timer;
+
     if (showResults || elapsedTime >= 1200) {
       clearInterval(timer);
     } else {
       timer = setInterval(() => {
         setElapsedTime((prevTime) => prevTime + 1);
+
+        // Check if there is 1 minute remaining (60 seconds)
+        if (1200 - elapsedTime === 60) {
+          // Display a notification to the user
+          // You can use a custom notification component or a library for a better user experience
+          alert("Còn lại 1 phút, hãy kiểm tra lại đáp án!");
+        }
       }, 1000);
     }
+
     return () => clearInterval(timer);
   }, [showResults, elapsedTime]);
 
@@ -80,6 +95,12 @@ const TestPage = () => {
       case 2:
         setQuestionsSet(Reading.De1); // Change this to the correct data source
         break;
+      case 3:
+        setQuestionsSet(Reading.De2); // Change this to the correct data source
+        break;
+        case 4:
+          setQuestionsSet(Reading.De3); // Change this to the correct data source
+          break;
       default:
         setQuestionsSet(Reading.Reading83);
     }
@@ -95,7 +116,9 @@ const TestPage = () => {
     const scorePerQuestion = 2; // Số điểm cho mỗi câu trả lời đúng
     return answeredQuestions.reduce((totalScore, questionNumber) => {
       const userAnswer = answers[questionNumber];
-      const correctAnswer = questions.find((q) => q.id === questionNumber)?.correctAnswer;
+      const correctAnswer = questions.find(
+        (q) => q.id === questionNumber
+      )?.correctAnswer;
       const isCorrect = userAnswer === correctAnswer;
 
       return totalScore + (isCorrect ? scorePerQuestion : 0);
@@ -109,7 +132,10 @@ const TestPage = () => {
     }));
 
     if (!answeredQuestions.includes(questionNumber)) {
-      setAnsweredQuestions((prevQuestions) => [...prevQuestions, questionNumber]);
+      setAnsweredQuestions((prevQuestions) => [
+        ...prevQuestions,
+        questionNumber,
+      ]);
     }
   };
 
@@ -119,7 +145,9 @@ const TestPage = () => {
 
     const incorrectQuestions = answeredQuestions.filter((questionNumber) => {
       const userAnswer = answers[questionNumber];
-      const correctAnswer = questions.find((q) => q.id === questionNumber)?.correctAnswer;
+      const correctAnswer = questions.find(
+        (q) => q.id === questionNumber
+      )?.correctAnswer;
       return userAnswer !== correctAnswer;
     });
 
@@ -148,17 +176,16 @@ const TestPage = () => {
 
           <div className="mb-4 ">
             <h3 className="block text-2xl font-medium mt-1 mr-2 text-gray-700 ">
-            {selectedSet === 1 ? "83" : "1"} 제회 
+              {selectedSet === 1 ? "83" : selectedSet - 1} 제회
             </h3>
-          
           </div>
 
           <div className="mt-4 text-center mb-2">
             <p className="text-xl font-medium text-red-600">
               Thời gian còn lại:{" "}
               <span className="text-xl text-red ">
-                {Math.floor((4200 - elapsedTime) / 60)} phút{" "}
-                {(1200 - elapsedTime) % 60} giây
+                {String(Math.floor((3660 - elapsedTime) / 60)).padStart(2, '0')}:
+                {String((1200 - elapsedTime) % 60).padStart(2, '0')} phút
               </span>
             </p>
           </div>
@@ -180,11 +207,10 @@ const TestPage = () => {
                           className={"text-black px-4 py-2 rounded "}
                           onClick={() => handleJumpToQuestion(question.id)}
                         >
-                          Câu {question.id} :{" "} 
-                          Bạn chọn 
+                          Câu {question.id} : Bạn chọn
                           {answers[question.id] ? (
                             <span className="font-bold ml-2 bg-green-500 text-white py-2 px-3 rounded-full">
-                               {answers[question.id]}
+                              {answers[question.id]}
                             </span>
                           ) : (
                             <span className="font-bold ml-2 bg-yellow-500 text-white py-2 px-3 rounded-full">
@@ -200,7 +226,13 @@ const TestPage = () => {
 
               {showResults && (
                 <div className="mr-1  text-center pb-10">
-                  <h1 className=" text-xl mb-8 pt-4 text-gray-500">Chúc mừng bạn :<span className="text-2xl font-bold text-green-600">{score}</span>Điểm</h1>
+                  <h1 className=" text-xl mb-8 pt-4 text-gray-500">
+                    Chúc mừng bạn :
+                    <span className="text-2xl font-bold text-green-600">
+                      {score}
+                    </span>
+                    Điểm
+                  </h1>
                   <h5 className="text-gray-900">Kiểm Tra đáp án</h5>
                   <ul className="list-none p-0" id="2">
                     {answeredQuestions.map((questionNumber) => (
@@ -250,7 +282,7 @@ const TestPage = () => {
           </div>
 
           <div className="questions-list flex-1 ml-[280px] mx-4 pl-8 pt-4 pr-8 rounded-md">
-           {questionsSet.map((question) => {
+            {questionsSet.map((question) => {
               const questionNumber = question.id;
               const userAnswer = answers[questionNumber];
               const isIncorrect =
@@ -273,26 +305,31 @@ const TestPage = () => {
                           {question.id}.{" "}
                         </p>
                         <img
-                        style={{width:'800px'}}
                           src={question.content}
                           alt={`Câu hỏi ${questionNumber}`}
-                          className="mb-2 ml-10 p-4 bg-white rounded-xl"
+                          className={`mb-2 ml-10 p-4 bg-white rounded-xl w-6/12 ${
+                            expanded ? "w-8/12" : ""
+                          }`}
+                          onClick={handleClick}
                         />
-                       <h2 className="mb-2 text-black text-xl mt-4">{question.type1}</h2>
+                        <h2 className="mb-2 text-black text-xl mt-4">
+                          {question.type1}
+                        </h2>
                       </div>
                     </div>
                   ) : (
                     <div className="flex">
-                    <p className="mb-2 text-black text-xl mt-4 pl-4 py-2 rounded-2xl flex">
-                      {question.id}.
-                      {question.content ? (
-                        question.content
-                      ) : (
-                        <h2 className="mb-2 text-black text-xl ">{question.type1}</h2>
-                      )}
-                    </p>
-                  </div>
-                  
+                      <p className="mb-2 text-black text-xl mt-4 pl-4 py-2 rounded-2xl flex">
+                        {question.id}.
+                        {question.content ? (
+                          question.content
+                        ) : (
+                          <h2 className="mb-2 text-black text-xl ">
+                            {question.type1}
+                          </h2>
+                        )}
+                      </p>
+                    </div>
                   )}
                   <div className="mb-8 flex">
                     {question.options.map((option, optionIndex) => (
@@ -323,7 +360,10 @@ const TestPage = () => {
                   {showResults && isIncorrect && (
                     <div>
                       <p className="text-red-500">
-                        Đáp án đúng: <span className="text-xl text-blue-500">{question.correctAnswer}</span> 
+                        Đáp án đúng:{" "}
+                        <span className="text-xl text-blue-500">
+                          {question.correctAnswer}
+                        </span>
                       </p>
                       <p className="text-green-400">{question.solution}</p>
                     </div>
@@ -345,10 +385,10 @@ const TestPage = () => {
       <div className="w-screen flex justify-end ">
         <button
           className={`bg-blue-500 text-white px-6 py-3 rounded mt-4 mr-10 ${
-            elapsedTime >= 1200 ? "disabled" : ""
+            elapsedTime >= 3660 ? "disabled" : ""
           }`}
-          onClick={elapsedTime >= 1200 ? null : handleSubmit}
-          disabled={elapsedTime >= 1200}
+          onClick={elapsedTime >= 3660 ? null : handleSubmit}
+          disabled={elapsedTime >= 3660}
         >
           Kiểm Tra Đáp Án
         </button>
