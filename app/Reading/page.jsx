@@ -176,7 +176,7 @@ const TestPage = () => {
 
           <div className="mb-4 ">
             <h3 className="block text-2xl font-medium mt-1 mr-2 text-gray-700 ">
-              {selectedSet === 1 ? "83" : selectedSet - 1} 제회
+             {selectedSet === 1 ? "83" : selectedSet - 1} 제회
             </h3>
           </div>
 
