@@ -11,7 +11,7 @@ function isImage(url) {
 }
 
 const SetSelection = ({ onSelectSet }) => {
-  const [selectedSet, setSelectedSet] = useState(null);
+  const [selectedSet, setSelectedSet] = useState(1);
 
   return (
     <div className="bg-[#e1e8f0] h-screen text-align">
@@ -51,6 +51,7 @@ const TestPage = () => {
   const [elapsedTime, setElapsedTime] = useState(0);
   const [questionsSet, setQuestionsSet] = useState([]);
   const [selectedSet, setSelectedSet] = useState(null);
+  
   const [questions, setQuestions] = useState([]);
   const [showTracking, setShowTracking] = useState(true);
   const [audio, setAudio] = useState();
