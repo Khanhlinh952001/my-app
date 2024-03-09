@@ -52,46 +52,6 @@ export default function Home() {
             </div>
           </div>
         </div>
-=======
-       <div className="lg:h-[60px] bg-white border-b border-gray-300 ">
-  <div className="container flex flex-col lg:flex-row justify-between pb-2">
-    {/* Logo */}
-    <div className="flex items-center">
-      <img className="w-10 mt-2 h-10" src="logo.jpg" alt="logo" />
-      <h2 className="text-[#b61e3b] font-bold mt-4 ml-2">
-        Tiếng Hàn Thu Huế
-      </h2>
-    </div>
-
-    {/* Navigation Links */}
-    <div className="lg:flex lg:justify-around mt-4">
-      <h3 className="text-gray-800 text-lg hover:bg-[#b61e3b] hover:text-white px-3 py-1 h-8 mx-2 rounded">
-        Tự ôn luyện
-      </h3>
-      <h3 className="text-gray-800 text-lg hover:bg-[#b61e3b] hover:text-white px-3 py-1 h-8 mx-2 rounded">
-        Ôn cùng nhau
-      </h3>
-      <Link href="/Listen">
-        <h3 className="text-gray-800 text-lg hover:bg-[#b61e3b] hover:text-white px-3 pt-1 h-8 mx-2 rounded">
-          Kiểm tra nghe
-        </h3>
-      </Link>
-      <Link href="/Reading">
-        <h3 className="text-gray-800 text-lg hover:bg-[#b61e3b] hover:text-white px-3 py-1 h-8 mx-2 rounded">
-          Kiểm tra đọc
-        </h3>
-      </Link>
-    </div>
-
-    {/* Auth Buttons */}
-    <div className="lg:flex items-center mt-4">
-      <button className="text-[#b61e3b] mx-2">Đăng ký</button>
-      <button className="text-white bg-[#b61e3b] px-2 rounded-xl">
-        Đăng nhập
-      </button>
-    </div>
-  </div>
-</div>
 
 
 
