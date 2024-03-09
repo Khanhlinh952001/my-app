@@ -1,9 +1,6 @@
 {
   "Listen83": [
-    {
-     "audio": "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen83%2F%5BLISTENING%20TOPIK%2083%5D%20TOPIK%20%E1%84%83%E1%85%B3%E1%86%AE%E1%84%80%E1%85%B5%2083%E1%84%92%E1%85%AC%20_%20%E1%84%92%E1%85%A1%E1%86%AB%E1%84%80%E1%85%AE%E1%86%A8%E1%84%8B%E1%85%A5%E1%84%82%E1%85%B3%E1%86%BC%E1%84%85%E1%85%A7%E1%86%A8%E1%84%89%E1%85%B5%E1%84%92%E1%85%A5%E1%86%B7%20%E1%84%83%E1%85%B3%E1%86%AE%E1%84%80%E1%85%B5%20%E1%84%8C%E1%85%B5%E1%84%86%E1%85%AE%E1%86%AB%20-%20BA%CC%80I%20NGHE%20TOPIK%20II%20ke%CC%80m%20phu%CC%A3%20%C4%91e%CC%82%CC%80.mp3?alt=media&token=0f332054-0c96-42ed-ba28-7bd54b68d23b",
-      "id": "Listen83"
-    },
+    
     {
       "id": "1",
       "type": "* [1~2] 다음을 듣고 가장 알맞은 그림 또는 그래프를 고르십시오. (2점)",
@@ -628,10 +625,6 @@
   ],
   "Listen1": [
     {
-      "audio": "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen1%2FListen1.mp3?alt=media&token=6f84d7bd-dd08-4742-9fb4-01b89f04efc7",
-      "id": "Listen1"
-    },
-    {
       "id": "1",
       "type": "* [1~2] 다음을 듣고 가장 알맞은 그림 또는 그래프를 고르십시오. (2점)",
       "options": [
@@ -1254,10 +1247,7 @@
     }
   ],
   "Listen2": [
-    {
-      "audio": "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen2%2FListen2.mp3?alt=media&token=33c06ab8-fd9e-4b66-bafc-7772c28680ed",
-      "id": "Listen2"
-    },
+   
     {
       "id": "1",
       "type": "* [1~2] 다음을 듣고 가장 알맞은 그림 또는 그래프를 고르십시오. (2점)",
@@ -1881,10 +1871,7 @@
     }
   ],
   "Listen3": [
-    {
-      "audio": "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen3%2FListen3.mp3?alt=media&token=42619370-76c5-424c-bab8-cdb34616c30d",
-      "id": "Listen3"
-    },
+   
     {
       "id": "1",
       "type": "* [1~2] 다음을 듣고 가장 알맞은 그림 또는 그래프를 고르십시오. (2점)",
