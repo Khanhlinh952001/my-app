@@ -394,8 +394,8 @@ const TestPage = () => {
           className={`bg-blue-500 text-white px-6 py-3 rounded mt-4 mr-10 ${
             elapsedTime >= 1200 ? "disabled" : ""
           }`}
-          onClick={elapsedTime >= 1200 ? null : handleSubmit}
-          disabled={elapsedTime >= 1200}
+          onClick={elapsedTime >= 4500 ? null : handleSubmit}
+          disabled={elapsedTime >= 4500}
         >
           Kiểm Tra Đáp Án
         </button>
