@@ -1,7 +1,7 @@
 "use client"
 import React, { useState, useEffect } from "react";
 import Listen from "../../json/Listen.json";
-
+import Link from "next/link";
 function isImage(url) {
   return (
     (url && /\.(jpeg|jpg|gif|png)$/.test(url.toLowerCase())) ||
@@ -14,8 +14,20 @@ const SetSelection = ({ onSelectSet }) => {
   const [selectedSet, setSelectedSet] = useState(1);
 
   return (
-    <div className="bg-[#e1e8f0] h-screen text-align">
-      <div className="flex justify-center items-center h-full">
+    <div>
+  <div className="lg:items-center lg:justify-center h-screen lg:hidden bg-[#e1e8f0] text-center">
+        <div className="p-8">
+          <h1 className="text-gray-800 text-lg mb-10">Trang web hiện chưa cập nhật trên di động</h1>
+          <Link href="/">
+            <button className="bg-[#b61e3b] hover:bg-[#b61e3b] text-white font-bold py-2 px-4 rounded">
+              Trở lại
+            </button>
+          </Link>
+        </div>
+      </div>
+    
+    <div className="bg-[#e1e8f0] h-screen lg:block text-align">
+      <div className="flex justify-center  items-center h-full ">
         <div className="bg-white p-8 rounded">
           <h1 className="text-3xl font-bold mb-4 text-black mx-4">
             Chọn Bộ Đề Trước Khi Thi
@@ -39,7 +51,7 @@ const SetSelection = ({ onSelectSet }) => {
           </div>
         </div>
       </div>
-    </div>
+    </div></div>
   );
 };
 
@@ -158,7 +170,9 @@ const TestPage = () => {
   console.log(audio)
 
   return (
-    <div className="bg-[#e1e8f0] h-full text-align">
+
+    
+    <div className="bg-[#e1e8f0] h-full text-align sm:hidden">
       <div className="flex">
         <div className="bg-white w-screen ml-[280px] mb-8 mr-4 text-center rounded">
           <h1 className="text-3xl font-bold mb-4 text-black pt-8">
@@ -401,8 +415,8 @@ const TestPage = () => {
           Kiểm Tra Đáp Án
         </button>
       </div>
-    </div>
-  );
+    </div> 
+  )
 };
 
 export default TestPage;
