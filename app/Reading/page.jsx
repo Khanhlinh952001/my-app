@@ -43,7 +43,8 @@ const SetSelection = ({ onSelectSet }) => {
               <option value={1}>Bộ đề 83</option>
               <option value={2}>Bộ đề 1</option>
               <option value={3}>Bộ đề 2</option>
-              <option value={4}>Bộ đề 3</option>
+             <option value={4}>Bộ đề 3</option>
+             <option value={5}>Bộ đề 4</option>
               {/* Add more options if needed */}
             </select>
             <button
@@ -114,6 +115,9 @@ const TestPage = () => {
       case 4:
         setQuestionsSet(Reading.De3); // Change this to the correct data source
         break;
+        case 5:
+        setQuestionsSet(Reading.De4); // Change this to the correct data source
+          break;
       default:
         setQuestionsSet(Reading.Reading83);
     }

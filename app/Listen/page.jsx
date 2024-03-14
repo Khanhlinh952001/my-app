@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useState, useEffect } from "react";
 import Listen from "../../json/Listen.json";
 import Link from "next/link";
@@ -15,9 +15,11 @@ const SetSelection = ({ onSelectSet }) => {
 
   return (
     <div>
-  <div className="lg:items-center lg:justify-center h-screen lg:hidden bg-[#e1e8f0] text-center">
+      <div className="lg:items-center lg:justify-center h-screen lg:hidden bg-[#e1e8f0] text-center">
         <div className="p-8">
-          <h1 className="text-gray-800 text-lg mb-10">Trang web hiện chưa cập nhật trên di động</h1>
+          <h1 className="text-gray-800 text-lg mb-10">
+            Trang web hiện chưa cập nhật trên di động
+          </h1>
           <Link href="/">
             <button className="bg-[#b61e3b] hover:bg-[#b61e3b] text-white font-bold py-2 px-4 rounded">
               Trở lại
@@ -25,33 +27,36 @@ const SetSelection = ({ onSelectSet }) => {
           </Link>
         </div>
       </div>
-    
-    <div className="bg-[#e1e8f0] h-screen lg:block text-align">
-      <div className="flex justify-center  items-center h-full ">
-        <div className="bg-white p-8 rounded">
-          <h1 className="text-3xl font-bold mb-4 text-black mx-4">
-            Chọn Bộ Đề Trước Khi Thi
-          </h1>
-          <div className="flex justify-around">
-            <select
-              className="border rounded-md text-gray-700 h-10 mt-8 bg-slate-300 p-2"
-              onChange={(e) => onSelectSet(Number(e.target.value))}
-            >
-              <option value={1}>Bộ đề 83</option>
-              <option value={2}>Bộ đề 1</option>
-              <option value={3}>Bộ đề 2</option>
-              <option value={4}>Bộ đề 3</option>
-            </select>
-            <button
-              className="bg-blue-500 text-white px-6 py-3 rounded mt-4 ml-8"
-              onClick={() => onSelectSet(selectedSet)}
-            >
-              Bắt đầu Thi
-            </button>
+
+      <div className="bg-[#e1e8f0] h-screen lg:block text-align">
+        <div className="flex justify-center  items-center h-full ">
+          <div className="bg-white p-8 rounded">
+            <h1 className="text-3xl font-bold mb-4 text-black mx-4">
+              Chọn Bộ Đề Trước Khi Thi
+            </h1>
+            <div className="flex justify-around">
+              <select
+                className="border rounded-md text-gray-700 h-10 mt-8 bg-slate-300 p-2"
+                onChange={(e) => onSelectSet(Number(e.target.value))}
+              >
+                <option value={1}>Bộ đề 83</option>
+                <option value={2}>Bộ đề 1</option>
+                <option value={3}>Bộ đề 2</option>
+                <option value={4}>Bộ đề 3</option>
+                <option value={5}>Bộ đề 4</option>
+                <option value={6}>Bộ đề 5</option>
+              </select>
+              <button
+                className="bg-blue-500 text-white px-6 py-3 rounded mt-4 ml-8"
+                onClick={() => onSelectSet(selectedSet)}
+              >
+                Bắt đầu Thi
+              </button>
+            </div>
           </div>
         </div>
       </div>
-    </div></div>
+    </div>
   );
 };
 
@@ -63,7 +68,7 @@ const TestPage = () => {
   const [elapsedTime, setElapsedTime] = useState(0);
   const [questionsSet, setQuestionsSet] = useState([]);
   const [selectedSet, setSelectedSet] = useState(null);
-  
+
   const [questions, setQuestions] = useState([]);
   const [showTracking, setShowTracking] = useState(true);
   const [audio, setAudio] = useState();
@@ -99,11 +104,27 @@ const TestPage = () => {
         break;
       case 3:
         setQuestionsSet(Listen.Listen2);
-        setAudio("https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen2%2FListen2.mp3?alt=media&token=33c06ab8-fd9e-4b66-bafc-7772c28680ed");
+        setAudio(
+          "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen2%2FListen2.mp3?alt=media&token=33c06ab8-fd9e-4b66-bafc-7772c28680ed"
+        );
         break;
       case 4:
         setQuestionsSet(Listen.Listen3);
-        setAudio("https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen3%2FListen3.mp3?alt=media&token=42619370-76c5-424c-bab8-cdb34616c30d");
+        setAudio(
+          "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen3%2FListen3.mp3?alt=media&token=42619370-76c5-424c-bab8-cdb34616c30d"
+        );
+        break;
+      case 5:
+        setQuestionsSet(Listen.Listen4);
+        setAudio(
+          "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen4%2FListen4.mp3?alt=media&token=9f71dbe8-b466-4656-9de7-44766f83afd0"
+        );
+        break;
+      case 6:
+        setQuestionsSet(Listen.Listen5);
+        setAudio(
+          "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen5%2FListen5.mp3?alt=media&token=e7f57b99-2fe7-476b-9484-9172d51cc2b0"
+        );
         break;
       default:
         break;
@@ -167,12 +188,10 @@ const TestPage = () => {
     return <SetSelection onSelectSet={setSelectedSet} />;
   }
 
-  console.log(audio)
+  console.log(audio);
 
   return (
-
-    
-    <div className="bg-[#e1e8f0] h-full text-align sm:hidden">
+    <div className="bg-[#e1e8f0] h-full text-align ">
       <div className="flex">
         <div className="bg-white w-screen ml-[280px] mb-8 mr-4 text-center rounded">
           <h1 className="text-3xl font-bold mb-4 text-black pt-8">
@@ -181,7 +200,7 @@ const TestPage = () => {
 
           <div className="mb-4 ">
             <label className="block text-2xl font-medium mt-1 mr-2 text-gray-700 ">
-             {selectedSet === 1 ? "83" : selectedSet - 1} 제회
+              {selectedSet === 1 ? "83" : selectedSet - 1} 제회
             </label>
           </div>
 
@@ -195,7 +214,7 @@ const TestPage = () => {
             </p>
           </div>
           <div className="w-full">
-          {audio ? (
+            {audio ? (
               <audio controls autoPlay>
                 <source src={audio} type="audio/mp3" />
                 Your browser does not support the audio element.
@@ -415,8 +434,8 @@ const TestPage = () => {
           Kiểm Tra Đáp Án
         </button>
       </div>
-    </div> 
-  )
+    </div>
+  );
 };
 
 export default TestPage;
