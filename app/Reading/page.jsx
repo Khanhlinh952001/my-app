@@ -13,14 +13,15 @@ function isImage(url) {
 }
 
 const SetSelection = ({ onSelectSet }) => {
-  const [selectedSet, setSelectedSet] = useState(1);
+  const [selectedSet, setSelectedSet] = useState("");
 
   return (
-
     <div>
-<div className="lg:hidden lg:items-center lg:justify-center h-screen bg-[#e1e8f0] text-center">
+      <div className="lg:hidden lg:items-center lg:justify-center h-screen bg-[#e1e8f0] text-center">
         <div className="p-8">
-          <h1 className="text-gray-800 text-lg mb-10">Trang web hiện chưa cập nhật trên di động</h1>
+          <h1 className="text-gray-800 text-lg mb-10">
+            Trang web hiện chưa cập nhật trên di động
+          </h1>
           <Link href="/">
             <button className="bg-[#b61e3b] hover:bg-[#b61e3b] text-white font-bold py-2 px-4 rounded">
               Trở lại
@@ -28,35 +29,37 @@ const SetSelection = ({ onSelectSet }) => {
           </Link>
         </div>
       </div>
-   
-    <div className="bg-[#e1e8f0] h-screen lg:block text-align">
-      <div className="flex justify-center items-center h-full">
-        <div className="bg-white p-8 rounded">
-          <h1 className="text-3xl font-bold mb-4 text-black mx-4">
-            Chọn Bộ Đề Trước Khi Thi
-          </h1>
-          <div className="flex justify-around">
-            <select
-              className="border rounded-md text-gray-700 h-10 mt-8 bg-slate-300 p-2"
-              onChange={(e) => onSelectSet(Number(e.target.value))}
-            >
-              <option value={1}>Bộ đề 83</option>
-              <option value={2}>Bộ đề 1</option>
-              <option value={3}>Bộ đề 2</option>
-             <option value={4}>Bộ đề 3</option>
-             <option value={5}>Bộ đề 4</option>
-              {/* Add more options if needed */}
-            </select>
-            <button
-              className="bg-blue-500 text-white px-6 py-3 rounded mt-4 ml-8"
-              onClick={() => onSelectSet(selectedSet)}
-            >
-              Bắt đầu Thi
-            </button>
+      <div className="bg-[#e1e8f0] h-screen lg:block text-align">
+        <div className="flex justify-center items-center h-full">
+          <div className="bg-white p-8 rounded">
+            <h1 className="text-3xl font-bold mb-4 text-black mx-4">
+              Chọn Bộ Đề Trước Khi Thi
+            </h1>
+            <div className="flex justify-around">
+              <select
+                className="border rounded-md text-gray-700 h-10 mt-8 bg-slate-300 p-2"
+                onChange={(e) => onSelectSet(Number(e.target.value))}
+              >
+                <option value={1}>Bộ đề 83</option>
+                <option value={2}>Bộ đề 1</option>
+                <option value={3}>Bộ đề 2</option>
+                <option value={4}>Bộ đề 3</option>
+                <option value={5}>Bộ đề 4</option>
+                <option value={6}>Bộ đề 5</option>
+                <option value={7}>Bộ đề 6</option>
+                {/* Add more options if needed */}
+              </select>
+              <button
+                className="bg-blue-500 text-white px-6 py-3 rounded mt-4 ml-8"
+                onClick={() => onSelectSet(selectedSet)}
+              >
+                Bắt đầu Thi
+              </button>
+            </div>
           </div>
         </div>
-      </div>
-    </div> </div>
+      </div>{" "}
+    </div>
   );
 };
 
@@ -104,7 +107,7 @@ const TestPage = () => {
     // Select the corresponding question set
     switch (selectedSet) {
       case 1:
-        setQuestionsSet(Reading.Reading83);
+      setQuestionsSet(Reading.Reading83);
         break;
       case 2:
         setQuestionsSet(Reading.De1); // Change this to the correct data source
@@ -115,9 +118,15 @@ const TestPage = () => {
       case 4:
         setQuestionsSet(Reading.De3); // Change this to the correct data source
         break;
-        case 5:
+      case 5:
         setQuestionsSet(Reading.De4); // Change this to the correct data source
-          break;
+        break;
+      case 6:
+        setQuestionsSet(Reading.De5); // Change this to the correct data source
+        break;
+      case 7:
+        setQuestionsSet(Reading.De6); // Change this to the correct data source
+        break;
       default:
         setQuestionsSet(Reading.Reading83);
     }
@@ -185,8 +194,6 @@ const TestPage = () => {
 
   return (
     <div>
-      
-
       <div className="bg-[#e1e8f0] h-full text-align ">
         <div className="flex">
           <div className="bg-white w-screen ml-[280px] mb-8 mr-4 text-center rounded">
@@ -224,7 +231,7 @@ const TestPage = () => {
                       Bảng theo dõi:
                     </h5>
                     <ul className="list-none p-0">
-                      {questionsSet.map((question) => (
+                      { questionsSet.map((question) => (
                         <li key={question.id} className="mb-2">
                           <button
                             className={"text-black px-4 py-2 rounded "}
