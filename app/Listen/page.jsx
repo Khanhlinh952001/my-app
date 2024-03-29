@@ -46,6 +46,7 @@ const SetSelection = ({ onSelectSet }) => {
                 <option value={5}>Bộ đề 4</option>
                 <option value={6}>Bộ đề 5</option>
                 <option value={7}>Bộ đề 6</option>
+                <option value={8}>Bộ đề 7</option>
               </select>
               <button
                 className="bg-blue-500 text-white px-6 py-3 rounded mt-4 ml-8"
@@ -133,6 +134,12 @@ const TestPage = () => {
           "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen6%2FNGHE6.mp3?alt=media&token=b8361427-b33f-4637-9cf8-494a456d8f96"
         );
         break;
+        case 8:
+          setQuestionsSet(Listen.Listen7);
+          setAudio(
+            "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen7%2Fnghe7.mp3?alt=media&token=ed10fc69-8489-44fb-9dd6-c76e09bb760a"
+          );
+          break;
       default:
         break;
     }

@@ -13,7 +13,7 @@ function isImage(url) {
 }
 
 const SetSelection = ({ onSelectSet }) => {
-  const [selectedSet, setSelectedSet] = useState("");
+  const [selectedSet, setSelectedSet] = useState(1);
 
   return (
     <div>
@@ -47,6 +47,7 @@ const SetSelection = ({ onSelectSet }) => {
                 <option value={5}>Bộ đề 4</option>
                 <option value={6}>Bộ đề 5</option>
                 <option value={7}>Bộ đề 6</option>
+                <option value={8}>Bộ đề 7</option>
                 {/* Add more options if needed */}
               </select>
               <button
@@ -127,6 +128,9 @@ const TestPage = () => {
       case 7:
         setQuestionsSet(Reading.De6); // Change this to the correct data source
         break;
+        case 8:
+          setQuestionsSet(Reading.De7); // Change this to the correct data source
+          break;
       default:
         setQuestionsSet(Reading.Reading83);
     }
