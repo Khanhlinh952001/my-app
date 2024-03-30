@@ -46,7 +46,8 @@ const SetSelection = ({ onSelectSet }) => {
                 <option value={5}>Bộ đề 4</option>
                 <option value={6}>Bộ đề 5</option>
                 <option value={7}>Bộ đề 6</option>
-                <option value={8}>Bộ đề 7</option>
+               <option value={8}>Bộ đề 7</option>
+               <option value={9}>Bộ đề 91</option>
               </select>
               <button
                 className="bg-blue-500 text-white px-6 py-3 rounded mt-4 ml-8"
@@ -63,6 +64,7 @@ const SetSelection = ({ onSelectSet }) => {
 };
 
 const TestPage = () => {
+  const [expanded, setExpanded] = useState(false);
   const [answers, setAnswers] = useState({});
   const [answeredQuestions, setAnsweredQuestions] = useState([]);
   const [showResults, setShowResults] = useState(false);
@@ -75,6 +77,11 @@ const TestPage = () => {
   const [showTracking, setShowTracking] = useState(true);
   const [audio, setAudio] = useState();
   const [score, setScore] = useState();
+
+  const handleClick = () => {
+    // Đảo ngược giá trị của trạng thái expanded khi click
+    setExpanded(!expanded);
+  };
 
   useEffect(() => {
     let timer;
@@ -140,6 +147,12 @@ const TestPage = () => {
             "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen7%2Fnghe7.mp3?alt=media&token=ed10fc69-8489-44fb-9dd6-c76e09bb760a"
           );
           break;
+          case 9:
+            setQuestionsSet(Listen.Listen8);
+            setAudio(
+              "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen8%2Fnghe8.mp3?alt=media&token=ccd4c62d-bdfb-492b-b43e-dd42d67211ed"
+            );
+            break;
       default:
         break;
     }
@@ -355,10 +368,13 @@ const TestPage = () => {
                             {question.id}.{" "}
                           </p>
                           <img
-                            style={{ width: "700px" }}
+                           
                             src={question.content}
                             alt={`Câu hỏi ${questionNumber}`}
-                            className="mb-2 ml-10"
+                            className={`mb-2 ml-10 p-4 bg-white rounded-xl w-8/12 ${
+                              expanded ? "w-10/12" : ""
+                            }`}
+                            onClick={handleClick}
                           />
                           <h2 className="mb-2 text-black text-xl mt-4">
                             {question.type1}

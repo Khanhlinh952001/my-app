@@ -48,6 +48,7 @@ const SetSelection = ({ onSelectSet }) => {
                 <option value={6}>Bộ đề 5</option>
                 <option value={7}>Bộ đề 6</option>
                 <option value={8}>Bộ đề 7</option>
+                <option value={9}>Bộ đề 91</option>
                 {/* Add more options if needed */}
               </select>
               <button
@@ -65,7 +66,7 @@ const SetSelection = ({ onSelectSet }) => {
 };
 
 const TestPage = () => {
-  const [expanded, setExpanded] = useState(false);
+ const [expanded, setExpanded] = useState(false);
   const [selectedSet, setSelectedSet] = useState(null);
   const [answers, setAnswers] = useState({});
   const [answeredQuestions, setAnsweredQuestions] = useState([]);
@@ -130,6 +131,9 @@ const TestPage = () => {
         break;
         case 8:
           setQuestionsSet(Reading.De7); // Change this to the correct data source
+          break;
+          case 9:
+          setQuestionsSet(Reading.De8); // Change this to the correct data source
           break;
       default:
         setQuestionsSet(Reading.Reading83);
@@ -341,8 +345,8 @@ const TestPage = () => {
                           <img
                             src={question.content}
                             alt={`Câu hỏi ${questionNumber}`}
-                            className={`mb-2 ml-10 p-4 bg-white rounded-xl w-6/12 ${
-                              expanded ? "w-8/12" : ""
+                            className={`mb-2 ml-10 p-4 bg-white rounded-xl w-8/12 ${
+                              expanded ? "w-10/12" : ""
                             }`}
                             onClick={handleClick}
                           />
