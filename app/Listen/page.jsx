@@ -86,7 +86,7 @@ const TestPage = () => {
   useEffect(() => {
     let timer;
 
-    if (showResults || elapsedTime >= 1200) {
+    if (showResults || elapsedTime >= 120) {
       clearInterval(timer);
     } else {
       timer = setInterval(() => {
