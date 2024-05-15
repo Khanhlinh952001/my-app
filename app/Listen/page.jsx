@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import Listen from "../../json/Listen.json";
 import Link from "next/link";
+import { Card } from "@mui/material";
 function isImage(url) {
   return (
     (url && /\.(jpeg|jpg|gif|png)$/.test(url.toLowerCase())) ||
@@ -46,8 +47,8 @@ const SetSelection = ({ onSelectSet }) => {
                 <option value={5}>Bộ đề 4</option>
                 <option value={6}>Bộ đề 5</option>
                 <option value={7}>Bộ đề 6</option>
-               <option value={8}>Bộ đề 7</option>
-               <option value={9}>Bộ đề 91</option>
+                <option value={8}>Bộ đề 7</option>
+                <option value={9}>Bộ đề 91</option>
               </select>
               <button
                 className="bg-blue-500 text-white px-6 py-3 rounded mt-4 ml-8"
@@ -77,25 +78,27 @@ const TestPage = () => {
   const [showTracking, setShowTracking] = useState(true);
   const [audio, setAudio] = useState();
   const [score, setScore] = useState();
+  const [timeLeft, setTimeLeft] = useState(3600);
+
+  const formatTime = (seconds) => {
+    const minutes = Math.floor(seconds / 60);
+    const remainingSeconds = seconds % 60;
+    return `${minutes.toString().padStart(2, "0")}:${remainingSeconds
+      .toString()
+      .padStart(2, "0")}`;
+  };
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTimeLeft((prevTimeLeft) => prevTimeLeft - 1);
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, []);
 
   const handleClick = () => {
     // Đảo ngược giá trị của trạng thái expanded khi click
     setExpanded(!expanded);
   };
-
-  useEffect(() => {
-    let timer;
-
-    if (showResults || elapsedTime >= 120) {
-      clearInterval(timer);
-    } else {
-      timer = setInterval(() => {
-        setElapsedTime((prevTime) => prevTime + 1);
-      }, 1000);
-    }
-
-    return () => clearInterval(timer);
-  }, [showResults, elapsedTime]);
 
   useEffect(() => {
     switch (selectedSet) {
@@ -135,24 +138,24 @@ const TestPage = () => {
           "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen5%2FListen5.mp3?alt=media&token=e7f57b99-2fe7-476b-9484-9172d51cc2b0"
         );
         break;
-        case 7:
+      case 7:
         setQuestionsSet(Listen.Listen6);
         setAudio(
           "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen6%2FNGHE6.mp3?alt=media&token=b8361427-b33f-4637-9cf8-494a456d8f96"
         );
         break;
-        case 8:
-          setQuestionsSet(Listen.Listen7);
-          setAudio(
-            "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen7%2Fnghe7.mp3?alt=media&token=ed10fc69-8489-44fb-9dd6-c76e09bb760a"
-          );
-          break;
-          case 9:
-            setQuestionsSet(Listen.Listen8);
-            setAudio(
-              "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen8%2Fnghe8.mp3?alt=media&token=ccd4c62d-bdfb-492b-b43e-dd42d67211ed"
-            );
-            break;
+      case 8:
+        setQuestionsSet(Listen.Listen7);
+        setAudio(
+          "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen7%2Fnghe7.mp3?alt=media&token=ed10fc69-8489-44fb-9dd6-c76e09bb760a"
+        );
+        break;
+      case 9:
+        setQuestionsSet(Listen.Listen8);
+        setAudio(
+          "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen8%2Fnghe8.mp3?alt=media&token=ccd4c62d-bdfb-492b-b43e-dd42d67211ed"
+        );
+        break;
       default:
         break;
     }
@@ -219,251 +222,216 @@ const TestPage = () => {
 
   return (
     <div className="bg-[#e1e8f0] h-full text-align ">
-      <div className="flex">
-        <div className="bg-white w-screen ml-[280px] mb-8 mr-4 text-center rounded">
-          <h1 className="text-3xl font-bold mb-4 text-black pt-8">
-            한국어 능력시험
-          </h1>
-
-          <div className="mb-4 ">
-            <label className="block text-2xl font-medium mt-1 mr-2 text-gray-700 ">
-              {selectedSet === 1 ? "83" : selectedSet - 1} 제회
-            </label>
-          </div>
-
-          <div className="mt-4 text-center mb-2">
-            <p className="text-xl font-medium text-red-600">
-              Thời gian còn lại:{" "}
-              <span className="text-xl text-red ">
-                {Math.floor((3660 - elapsedTime) / 60)} phút{" "}
-                {(1200 - elapsedTime) % 60} giây
-              </span>
-            </p>
-          </div>
-          <div className="w-full">
-            {audio ? (
-              <audio controls autoPlay>
-                <source src={audio} type="audio/mp3" />
-                Your browser does not support the audio element.
-              </audio>
-            ) : (
-              <p>No audio available</p>
-            )}
-          </div>
-        </div>
-      </div>
-      <div>
-        <div className="flex  ">
-          <div className="w-[280px]  h-full fixed top-4 overflow-y-auto  ">
-            <div className="bg-white pb-10 mx-2 rounded-md mr-2">
+      
+        <div className="flex relative ">
+          <div className="w-2/12 h-full top-0 fixed overflow-y-auto  ">
+            <Card className=" bg-slate-100  rounded-md ">
               {showTracking && (
                 <div className="text-center">
-                  <h5 className="text-[18px] font-medium mb-2 text-gray-800">
+                  <h5 className="text-lg font-medium text-gray-700">
                     Bảng theo dõi:
                   </h5>
-                  <ul className="list-none p-0">
-                    {questionsSet &&
-                      questionsSet.map((question) => (
-                        <li key={question.id} className="mb-2">
-                          <button
-                            className={"text-black px-4 py-2 rounded "}
-                            onClick={() => handleJumpToQuestion(question.id)}
-                          >
-                            Câu {question.id} : Bạn chọn
-                            {answers[question.id] ? (
-                              <span className="font-bold ml-2 bg-green-500 text-white py-2 px-3 rounded-full">
-                                {answers[question.id]}
-                              </span>
-                            ) : (
-                              <span className="font-bold ml-2 bg-yellow-500 text-white py-2 px-3 rounded-full">
-                                ?
-                              </span>
-                            )}
-                          </button>
-                        </li>
-                      ))}
-                  </ul>
+                  <span className="text-gray-500">
+                    {formatTime(timeLeft)} phút
+                  </span>
+                  <ul className="list-none flex flex-wrap">
+                    {questionsSet.map((question, index) => (
+                      <li
+                        key={question.id}
+                        className="m-1"
+                        style={{ width: "20%" }}
+                      >
+                        <div>
+                          <Card>
+                            <button
+                              className={"text-black rounded p-1 "}
+                              onClick={() => handleJumpToQuestion(question.id)}
+                            >
+                              <span className="ml-1 ">{question.id}</span>
+                              {answers[question.id] ? (
+                                <span className="font-bold bg-green-500 ml-1 text-white p-1 px-2 rounded-sm">
+                                  {answers[question.id]}
+                                </span>
+                              ) : (
+                                <span className="font-bold text-gray-400 ml-1 rounded-sm">
+                                  ?
+                                </span>
+                              )}
+                            </button>
+                          </Card>
+                        </div>
+
+                        {index % 5 === 4 && <br />}
+                      </li>
+                    ))}
+                  </ul> 
                 </div>
               )}
 
               {showResults && (
-                <div className="mr-1  text-center pb-10">
-                  <h1 className=" text-xl mb-8 pt-4 text-gray-500">
-                    Chúc mừng bạn :
-                    <span className="text-2xl font-bold text-green-600">
-                      {score}
-                    </span>
-                    Điểm
-                  </h1>
-                  <h5 className="text-gray-900">Kiểm Tra đáp án</h5>
-                  <ul className="list-none p-0" id="2">
-                    {answeredQuestions.map((questionNumber) => (
-                      <li key={questionNumber} className="mb-2 ">
-                        <div className=" border-b pb-2">
-                          <div className="flex ">
-                            <button
-                              className={`${
-                                answers[questionNumber] ===
-                                questions.find((q) => q.id === questionNumber)
-                                  ?.correctAnswer
-                                  ? "bg-green-500"
-                                  : "bg-red-500"
-                              } text-white p-2 ml-2 w-16 rounded`}
-                              onClick={() =>
-                                handleJumpToQuestion(questionNumber)
-                              }
-                            >
-                              Câu {questionNumber}
-                            </button>
-                            {answers[questionNumber] && (
-                              <span className="ml-1 mt-1 w-[180px] mr-1 text-gray-600">
-                                {answers[questionNumber] ===
-                                questions.find((q) => q.id === questionNumber)
-                                  ?.correctAnswer
-                                  ? "True"
-                                  : "False"}
-                                - Đáp án là:{" "}
-                                <span className="mt-4 bg-green-500 rounded-full py-2 px-3">
-                                  {
+                <Card className="flex justify-center text-center pb-10">
+                  <div>
+                    <h1 className=" text-xl mb-8 pt-4 text-gray-500">
+                      Chúc mừng bạn :
+                      <span className="text-2xl font-bold text-green-600">
+                        {score}
+                      </span>
+                      Điểm
+                    </h1>
+                    <h5 className="text-gray-900">Kiểm Tra đáp án</h5>
+                    <p className="text-gray-400 text-sm">Xanh là đúng</p>
+                    <p className="text-gray-400 text-sm">Đỏ là sai</p>
+                    <ul className="list-none flex flex-wrap">
+                      {answeredQuestions.map((questionNumber, index) => (
+                        <li
+                          key={questionNumber}
+                          className="m-1"
+                          style={{ width: "20%" }}
+                        >
+                          <Card className=" border-b p-1">
+                            <div className="flex ">
+                              <button
+                                className={
+                                  "text-black w-20 flex justify-between rounded "
+                                }
+                                onClick={() =>
+                                  handleJumpToQuestion(questionNumber)
+                                }
+                             >
+                                <span className="mr-1 ">{questionNumber}</span>
+                                {/* { answers[questionNumber] } */}
+                                <span
+                                  className={`${
+                                    answers[questionNumber] ===
                                     questions.find(
                                       (q) => q.id === questionNumber
                                     )?.correctAnswer
-                                  }
+                                      ? "bg-green-500"
+                                      : "bg-red-500"
+                                  } text-white px-2  rounded font-normal`}
+                                >
+                                  {answers[questionNumber]}
                                 </span>
-                              </span>
-                            )}
-                            <div></div>
-                          </div>
-                        </div>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+                              </button>
+                            </div>
+                          </Card>
+                          {index % 5 === 4 && <br />}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </Card>
               )}
-            </div>
+            </Card>
           </div>
 
-          <div className="questions-list flex-1 ml-[280px] mx-4 pl-8 pt-4 pr-8 rounded-md  bg-slate-100">
-            {questionsSet &&
-              questionsSet.map((question) => {
+          <div className="">
+            <Card className="bg-white mb-8 ml-[300px] mr-1  text-center rounded">
+              <h1 className="text-3xl font-bold mb-4 text-black pt-8">
+                한국어 능력시험
+              </h1>
+
+              <div className="mb-4 ">
+                <h3 className="block text-2xl font-medium mt-1 mr-2 text-gray-700 ">
+                  {selectedSet === 1 ? "83" : selectedSet - 1} 제회
+                </h3>
+              </div>
+            </Card>
+
+            <div className="questions-list mx-4 ml-[300px] pl-8 pt-4 pr-8 rounded-md">
+              {questionsSet.map((question) => {
                 const questionNumber = question.id;
                 const userAnswer = answers[questionNumber];
                 const isIncorrect =
                   userAnswer && userAnswer !== question.correctAnswer;
 
                 return (
-                  <div
+                  <Card
                     key={questionNumber}
                     id={`question${questionNumber}`}
-                    className="mb-6 bg-white pl-6 pr-6 pb-6 pt-1  rounded-xl"
+                    className="mb-6 bg-slate-300 rounded-xl "
                   >
-                    <h1 className="mb-2 text-black text-2xl mt-4">
+                    <h1 className="mb-2 text-gray-700 ml-4 text-xl mt-4">
                       {question.type}
                     </h1>
-                    {isImage(question.content) ? (
-                      <div className="container">
-                        <div>
-                          <p className="mb-2 text-gray-800 text-xl mt-4">
-                            {" "}
-                            {question.id}.{" "}
-                          </p>
-                          <img
-                           
-                            src={question.content}
-                            alt={`Câu hỏi ${questionNumber}`}
-                            className={`mb-2 ml-10 p-4 bg-white rounded-xl w-8/12 ${
-                              expanded ? "w-10/12" : ""
-                            }`}
-                            onClick={handleClick}
+                    <div className="container">
+                      <div className="flex justify-center ">
+                        <img
+                          src={question.content}
+                          alt={`Câu hỏi ${questionNumber}`}
+                          className="mb-2 p-4 bg-slate-100 lg:w-7/12 md:w-full sm:w-full rounded-xl "
+                          onClick={handleClick}
+                        />
+                      </div>
+                    </div>
+
+                    <div className="my-4 flex justify-center">
+                      {question.options.map((option, optionIndex) => (
+                        <label
+                          key={optionIndex}
+                          className="block mb-2 pl-12 text-gray-700 text-xl "
+                        >
+                          <input
+                            type="checkbox"
+                            name={`q${questionNumber}`}
+                            value={(optionIndex + 1).toString()} // Use (optionIndex + 1) as the value
+                            onChange={() =>
+                              handleAnswerChange(
+                                questionNumber,
+                                (optionIndex + 1).toString()
+                              )
+                            }
+                            checked={
+                              userAnswer === (optionIndex + 1).toString()
+                            }
+                            className="mx-1 h-5 w-5  "
+                            disabled={showResults} // Disable radio buttons after submitting
                           />
-                          <h2 className="mb-2 text-black text-xl mt-4">
-                            {question.type1}
-                          </h2>
-                        </div>
-                      </div>
-                    ) : (
-                      <div className="">
-                        <p className="mb-2 text-black text-xl mt-4 pl-4 py-2 rounded-2xl flex">
-                          {question.id}.
-                          {question.content ? (
-                            question.content
-                          ) : (
-                            <h2 className="mb-2 text-black text-xl ">
-                              {question.type1}
-                            </h2>
-                          )}
-                        </p>
-                      </div>
-                    )}
-                    <div className="mb-8">
-                      {question.options && (
-                        <div className="flex space-x-8 ml-40">
-                          {question.options.map((option, optionIndex) => (
-                            <div
-                              key={optionIndex}
-                              className="flex items-center"
-                            >
-                              <input
-                                type="checkbox"
-                                name={`q${questionNumber}`}
-                                value={(optionIndex + 1).toString()}
-                                onChange={() =>
-                                  handleAnswerChange(
-                                    questionNumber,
-                                    (optionIndex + 1).toString()
-                                  )
-                                }
-                                checked={
-                                  userAnswer === (optionIndex + 1).toString()
-                                }
-                                className="h-5 w-5 border-gray-300 focus:ring-indigo-500 text-indigo-600"
-                                disabled={showResults}
-                              />
-                              <label className="text-gray-700 text-xl ml-2">
-                                {`  ${optionIndex + 1}   ${option}`}
-                              </label>
-                            </div>
-                          ))}
-                        </div>
-                      )}
+                          <span className="text-2xl">
+                            {`${option}. ${optionIndex + 1}`}
+                          </span>
+                          
+                        </label>
+                      ))}
                     </div>
 
                     {showResults && isIncorrect && (
-                      <div>
-                        <p className="text-red-500">
-                          Đáp án đúng:{" "}
-                          <span className="text-xl text-blue-500">
-                            {question.correctAnswer}
-                          </span>
-                        </p>
-                        <p className="text-green-400">{question.solution}</p>
+                      <div className="flex mb-2 justify-center">
+                        <div>
+                          <Card className="flex justify-center mb-1">
+                            Đáp án đúng :{" "}
+                            <span className="text-xl ml-1 text-blue-500">
+                              {question.correctAnswer}
+                            </span>
+                          </Card>
+                          <p className="text-gray-400 text-md">
+                            Hướng dẫn giải : {question.solution}
+                          </p>
+                        </div>
                       </div>
                     )}
-                  </div>
+                  </Card>
                 );
               })}
+            </div>
+
+            <div className="w-screen flex justify-end ">
+              <button
+                className={`bg-blue-500 text-white px-6 py-3 rounded mt-4 mr-10 ${
+                  elapsedTime >= 3660 ? "disabled" : ""
+                }`}
+                onClick={elapsedTime >= 3660 ? null : handleSubmit}
+                disabled={elapsedTime >= 3660}
+              >
+                Kiểm Tra Đáp Án
+              </button>
+            </div>
           </div>
         </div>
-
-        {showResults && (
-          <div className="mt-4">
-            <p className="text-xl font-medium text-black ml-20">
-              Thời gian làm bài: {elapsedTime} giây
-            </p>
-          </div>
-        )}
-      </div>
-      <div className="w-screen flex justify-end ">
-        <button
-          className="bg-blue-500 text-white px-6 py-3 rounded mt-4 mr-10 "
-          onClick={elapsedTime >= 4500 ? null : handleSubmit}
-          disabled={elapsedTime >= 4500}
-        >
-          Kiểm Tra Đáp Án
-        </button>
-      </div>
+        
+     
     </div>
   );
 };
-// 
+//
 export default TestPage;
