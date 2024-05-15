@@ -193,7 +193,7 @@ const TestPage = () => {
     <div>
       <div className="bg-[#e1e8f0] h-full ">
         {/* left */}
-       <div className="w-2/12 h-full top-4 fixed overflow-y-auto  ">
+       <div className="w-2/12 h-full top-0 fixed overflow-y-auto  ">
           <Card className=" bg-slate-100  rounded-md ">
             {showTracking && (
               <div className="text-center">
