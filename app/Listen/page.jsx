@@ -222,111 +222,110 @@ const TestPage = () => {
 
   return (
     <div className="bg-[#e1e8f0] h-full text-align ">
-      
-        <div className="flex relative ">
-          <div className="w-2/12 h-full top-0 fixed overflow-y-auto  ">
-            <Card className=" bg-slate-100  rounded-md ">
-              {showTracking && (
-                <div className="text-center">
-                  <h5 className="text-lg font-medium text-gray-700">
-                    Bảng theo dõi:
-                  </h5>
-                  <span className="text-gray-500">
-                    {formatTime(timeLeft)} phút
-                  </span>
+      <div className="flex relative ">
+        <div className="w-2/12 h-full top-0 fixed overflow-y-auto  ">
+          <Card className=" bg-slate-100  rounded-md ">
+            {showTracking && (
+              <div className="text-center">
+                <h5 className="text-lg font-medium text-gray-700">
+                  Bảng theo dõi:
+                </h5>
+                <span className="text-gray-500">
+                  {formatTime(timeLeft)} phút
+                </span>
+                <ul className="list-none flex flex-wrap">
+                  {questionsSet.map((question, index) => (
+                    <li
+                      key={question.id}
+                      className="m-1"
+                      style={{ width: "20%" }}
+                    >
+                      <div>
+                        <Card>
+                          <button
+                            className={"text-black rounded p-1 "}
+                            onClick={() => handleJumpToQuestion(question.id)}
+                          >
+                            <span className="ml-1 ">{question.id}</span>
+                            {answers[question.id] ? (
+                              <span className="font-bold bg-green-500 ml-1 text-white p-1 px-2 rounded-sm">
+                                {answers[question.id]}
+                              </span>
+                            ) : (
+                              <span className="font-bold text-gray-400 ml-1 rounded-sm">
+                                ?
+                              </span>
+                            )}
+                          </button>
+                        </Card>
+                      </div>
+
+                      {index % 5 === 4 && <br />}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+            {showResults && (
+              <Card className="flex justify-center text-center pb-10">
+                <div>
+                  <h1 className=" text-xl mb-8 pt-4 text-gray-500">
+                    Chúc mừng bạn :
+                    <span className="text-2xl font-bold text-green-600">
+                      {score}
+                    </span>
+                    Điểm
+                  </h1>
+                  <h5 className="text-grap-900">Kiểm Tra đáp án</h5>
+                  <p className="text-gray-400 text-sm">Xanh là đúng</p>
+                  <p className="text-gray-400 text-sm">Đỏ là sai </p>
                   <ul className="list-none flex flex-wrap">
-                    {questionsSet.map((question, index) => (
+                    {answeredQuestions.map((questionNumber, index) => (
                       <li
-                        key={question.id}
+                        key={questionNumber}
                         className="m-1"
                         style={{ width: "20%" }}
                       >
-                        <div>
-                          <Card>
+                        <Card className=" border-b p-1">
+                          <div className="flex ">
                             <button
-                              className={"text-black rounded p-1 "}
-                              onClick={() => handleJumpToQuestion(question.id)}
+                              className={
+                                "text-black w-20 flex justify-between rounded "
+                              }
+                              onClick={() =>
+                                handleJumpToQuestion(questionNumber)
+                              }
                             >
-                              <span className="ml-1 ">{question.id}</span>
-                              {answers[question.id] ? (
-                                <span className="font-bold bg-green-500 ml-1 text-white p-1 px-2 rounded-sm">
-                                  {answers[question.id]}
-                                </span>
-                              ) : (
-                                <span className="font-bold text-gray-400 ml-1 rounded-sm">
-                                  ?
-                                </span>
-                              )}
+                              <span className="mr-1 ">{questionNumber}</span>
+                              {/* { answers[questionNumber] } */}
+                              <span
+                                className={`${
+                                  answers[questionNumber] ===
+                                  questions.find((q) => q.id === questionNumber)
+                                    ?.correctAnswer
+                                    ? "bg-green-500"
+                                    : "bg-red-500"
+                                } text-white px-2  rounded font-normal`}
+                              >
+                                {answers[questionNumber]}
+                              </span>
                             </button>
-                          </Card>
-                        </div>
-
+                          </div>
+                        </Card>
                         {index % 5 === 4 && <br />}
                       </li>
                     ))}
-                  </ul> 
+                  </ul>
                 </div>
-              )}
+              </Card>
+            )}
+          </Card>
+        </div>
 
-              {showResults && (
-                <Card className="flex justify-center text-center pb-10">
-                  <div>
-                    <h1 className=" text-xl mb-8 pt-4 text-gray-500">
-                      Chúc mừng bạn :
-                      <span className="text-2xl font-bold text-green-600">
-                        {score}
-                      </span>
-                      Điểm
-                    </h1>
-                    <h5 className="text-gray-900">Kiểm Tra đáp án</h5>
-                    <p className="text-gray-400 text-sm">Xanh là đúng</p>
-                    <p className="text-gray-400 text-sm">Đỏ là sai</p>
-                    <ul className="list-none flex flex-wrap">
-                      {answeredQuestions.map((questionNumber, index) => (
-                        <li
-                          key={questionNumber}
-                          className="m-1"
-                          style={{ width: "20%" }}
-                        >
-                          <Card className=" border-b p-1">
-                            <div className="flex ">
-                              <button
-                                className={
-                                  "text-black w-20 flex justify-between rounded "
-                                }
-                                onClick={() =>
-                                  handleJumpToQuestion(questionNumber)
-                                }
-                             >
-                                <span className="mr-1 ">{questionNumber}</span>
-                                {/* { answers[questionNumber] } */}
-                                <span
-                                  className={`${
-                                    answers[questionNumber] ===
-                                    questions.find(
-                                      (q) => q.id === questionNumber
-                                    )?.correctAnswer
-                                      ? "bg-green-500"
-                                      : "bg-red-500"
-                                  } text-white px-2  rounded font-normal`}
-                                >
-                                  {answers[questionNumber]}
-                                </span>
-                              </button>
-                            </div>
-                          </Card>
-                          {index % 5 === 4 && <br />}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </Card>
-              )}
-            </Card>
-          </div>
-
-          <div className="">
-            <Card className="bg-white mb-8 ml-[300px] mr-1  text-center rounded">
+        <div className=" ">
+          <Card className="bg-white mb-8  mr-1 ml-[300px] text-center flex justify-center rounded">
+            <div>
               <h1 className="text-3xl font-bold mb-4 text-black pt-8">
                 한국어 능력시험
               </h1>
@@ -336,100 +335,106 @@ const TestPage = () => {
                   {selectedSet === 1 ? "83" : selectedSet - 1} 제회
                 </h3>
               </div>
-            </Card>
+              <div className="">
+                {audio ? (
+                  <audio controls autoPlay>
+                    <source src={audio} type="audio/mp3" />
+                    Your browser does not support the audio element.
+                  </audio>
+                ) : (
+                  <p>No audio available</p>
+                )}
+              </div>
+            </div>
+          </Card>
 
-            <div className="questions-list mx-4 ml-[300px] pl-8 pt-4 pr-8 rounded-md">
-              {questionsSet.map((question) => {
-                const questionNumber = question.id;
-                const userAnswer = answers[questionNumber];
-                const isIncorrect =
-                  userAnswer && userAnswer !== question.correctAnswer;
+          <div className="questions-list mx-4 ml-[300px] pl-8 pt-4 pr-8 rounded-md">
+            {questionsSet.map((question) => {
+              const questionNumber = question.id;
+              const userAnswer = answers[questionNumber];
+              const isIncorrect =
+                userAnswer && userAnswer !== question.correctAnswer;
 
-                return (
-                  <Card
-                    key={questionNumber}
-                    id={`question${questionNumber}`}
-                    className="mb-6 bg-slate-300 rounded-xl "
-                  >
-                    <h1 className="mb-2 text-gray-700 ml-4 text-xl mt-4">
-                      {question.type}
-                    </h1>
-                    <div className="container">
-                      <div className="flex justify-center ">
-                        <img
-                          src={question.content}
-                          alt={`Câu hỏi ${questionNumber}`}
-                          className="mb-2 p-4 bg-slate-100 lg:w-7/12 md:w-full sm:w-full rounded-xl "
-                          onClick={handleClick}
+              return (
+                <Card
+                  key={questionNumber}
+                  id={`question${questionNumber}`}
+                  className="mb-6 bg-slate-300 rounded-xl "
+                >
+                  <h1 className="mb-2 text-gray-700 ml-4 text-xl mt-4">
+                    {question.type}
+                  </h1>
+                  <div className="container">
+                    <div className="flex justify-center ">
+                      <img
+                        src={question.content}
+                        alt={`Câu hỏi ${questionNumber}`}
+                        className="mb-2 p-4 bg-slate-100 lg:w-7/12 md:w-full sm:w-full rounded-xl "
+                        onClick={handleClick}
+                      />
+                    </div>
+                  </div>
+
+                  <div className="my-4 flex justify-center">
+                    {question.options.map((option, optionIndex) => (
+                      <label
+                        key={optionIndex}
+                        className="block mb-2 pl-12 text-gray-700 text-xl "
+                      >
+                        <input
+                          type="checkbox"
+                          name={`q${questionNumber}`}
+                          value={(optionIndex + 1).toString()} // Use (optionIndex + 1) as the value
+                          onChange={() =>
+                            handleAnswerChange(
+                              questionNumber,
+                              (optionIndex + 1).toString()
+                            )
+                          }
+                          checked={userAnswer === (optionIndex + 1).toString()}
+                          className="mx-2 h-5 w-5  "
+                          disabled={showResults} // Disable radio buttons after submitting
                         />
-                      </div>
-                    </div>
+                        <span className="text-2xl">
+                          {`${option}. ${optionIndex + 1}`}
+                        </span>
+                      </label>
+                    ))}
+                  </div>
 
-                    <div className="my-4 flex justify-center">
-                      {question.options.map((option, optionIndex) => (
-                        <label
-                          key={optionIndex}
-                          className="block mb-2 pl-12 text-gray-700 text-xl "
-                        >
-                          <input
-                            type="checkbox"
-                            name={`q${questionNumber}`}
-                            value={(optionIndex + 1).toString()} // Use (optionIndex + 1) as the value
-                            onChange={() =>
-                              handleAnswerChange(
-                                questionNumber,
-                                (optionIndex + 1).toString()
-                              )
-                            }
-                            checked={
-                              userAnswer === (optionIndex + 1).toString()
-                            }
-                            className="mx-1 h-5 w-5  "
-                            disabled={showResults} // Disable radio buttons after submitting
-                          />
-                          <span className="text-2xl">
-                            {`${option}. ${optionIndex + 1}`}
+                  {showResults && isIncorrect && (
+                    <div className="flex mb-2 justify-center">
+                      <div>
+                        <Card className="flex justify-center mb-1">
+                          Đáp án đúng :{" "}
+                          <span className="text-xl ml-1 text-blue-500">
+                            {question.correctAnswer}
                           </span>
-                          
-                        </label>
-                      ))}
-                    </div>
-
-                    {showResults && isIncorrect && (
-                      <div className="flex mb-2 justify-center">
-                        <div>
-                          <Card className="flex justify-center mb-1">
-                            Đáp án đúng :{" "}
-                            <span className="text-xl ml-1 text-blue-500">
-                              {question.correctAnswer}
-                            </span>
-                          </Card>
-                          <p className="text-gray-400 text-md">
-                            Hướng dẫn giải : {question.solution}
-                          </p>
-                        </div>
+                        </Card>
+                        <p className="text-gray-400 text-md">
+                          Hướng dẫn giải : {question.solution}
+                        </p>
                       </div>
-                    )}
-                  </Card>
-                );
-              })}
-            </div>
+                    </div>
+                  )}
+                </Card>
+              );
+            })}
+          </div>
 
-            <div className="w-screen flex justify-end ">
-              <button
-                className={`bg-blue-500 text-white px-6 py-3 rounded mt-4 mr-10 ${
-                  elapsedTime >= 3660 ? "disabled" : ""
-                }`}
-                onClick={elapsedTime >= 3660 ? null : handleSubmit}
-                disabled={elapsedTime >= 3660}
-              >
-                Kiểm Tra Đáp Án
-              </button>
-            </div>
+          <div className="w-screen flex justify-end ">
+            <button
+              className={`bg-blue-500 text-white px-6 py-3 rounded mt-4 mr-10 ${
+                elapsedTime >= 3660 ? "disabled" : ""
+              }`}
+              onClick={elapsedTime >= 3660 ? null : handleSubmit}
+              disabled={elapsedTime >= 3660}
+            >
+              Kiểm Tra Đáp Án
+            </button>
           </div>
         </div>
-        
-     
+      </div>
     </div>
   );
 };
