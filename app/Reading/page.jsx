@@ -231,6 +231,12 @@ const TestPage = () => {
                     </li>
                   ))}
                 </ul>
+                <button
+              className={`bg-blue-500 text-white px-6 py-3 rounded mt-4 mr-10`}
+              onClick={ handleSubmit}
+            >
+              Kiểm Tra Đáp Án
+            </button>
               </div>
             )}
 
@@ -380,15 +386,7 @@ const TestPage = () => {
             </div>
 
           <div className="w-screen flex justify-end ">
-            <button
-              className={`bg-blue-500 text-white px-6 py-3 rounded mt-4 mr-10 ${
-                elapsedTime >= 3660 ? "disabled" : ""
-              }`}
-              onClick={elapsedTime >= 3660 ? null : handleSubmit}
-              disabled={elapsedTime >= 3660}
-            >
-              Kiểm Tra Đáp Án
-            </button>
+        
           </div>
         </div>
       </div>

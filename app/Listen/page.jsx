@@ -264,6 +264,13 @@ const TestPage = () => {
                     </li>
                   ))}
                 </ul>
+                <button
+              className={`bg-blue-500 text-white px-6 py-3 rounded my-2 mr-10`}
+              onClick={ handleSubmit}
+                             
+            >
+              Kiểm Tra Đáp Án
+            </button>
               </div>
             )}
 
@@ -324,7 +331,7 @@ const TestPage = () => {
         </div>
 
         <div className=" ">
-          <Card className="bg-white mb-8  mr-1 ml-[300px] text-center flex justify-center rounded">
+          <Card className="bg-white mb-8  mr-1 ml-[320px] text-center flex justify-center rounded">
             <div>
               <h1 className="text-3xl font-bold mb-4 text-black pt-8">
                 한국어 능력시험
@@ -421,18 +428,10 @@ const TestPage = () => {
               );
             })}
           </div>
-
           <div className="w-screen flex justify-end ">
-            <button
-              className={`bg-blue-500 text-white px-6 py-3 rounded mt-4 mr-10 ${
-                elapsedTime >= 3660 ? "disabled" : ""
-              }`}
-              onClick={elapsedTime >= 3660 ? null : handleSubmit}
-              disabled={elapsedTime >= 3660}
-            >
-              Kiểm Tra Đáp Án
-            </button>
+         
           </div>
+        
         </div>
       </div>
     </div>
