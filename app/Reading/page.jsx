@@ -350,7 +350,7 @@ const TestPage = () => {
                           <label key={optionIndex} className={labelClassNames}>
                             <input
                               type="checkbox"
-                              name={`q${questionNumber}`}
+                             name={`q${questionNumber}`}
                               value={(optionIndex + 1).toString()}
                               onChange={() =>
                                 handleAnswerChange(questionNumber, (optionIndex + 1).toString())

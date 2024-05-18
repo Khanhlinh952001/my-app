@@ -135,6 +135,19 @@ const QuestionsComponent = ({ questionsSet }) => {
                       }`}
                       onLoad={() => setImageLoading(false)} // Remove loading indicator when image is loaded
                     />
+                       {showResults && isIncorrect && (
+              <div className="w-full flex flex-col items-center mt-4">
+                <Card className="w-full p-4 mb-2">
+                 Correct Answer:{" "}
+                  <span className="text-blue-500">
+                    {question.correctAnswer}
+                  </span>
+                </Card>
+                <p className="text-gray-400">
+                  Solution: {question.solution}
+                </p>
+              </div>
+            )}
                   </div>
                   <button
                     onClick={goToNextQuestion}
@@ -161,39 +174,28 @@ const QuestionsComponent = ({ questionsSet }) => {
                       ? "bg-green-500"
                       : "bg-green-200"
                   }`}
-                 onClick={() => {
-                        setCurrentQuestionIndex(currentQuestionIndex + 1);
-                        setImageLoading(true);
-                      }}
+               
                 >
                   <label className={`w-full h-full flex items-center  pl-2 rounded ${userAnswer === (optionIndex + 1).toString() ? 'bg-green-700':''}`}>
-                    <input
-                      type="radio"
-                      name={`q${questionNumber}`}
-                      value={(optionIndex + 1).toString()}
-                      checked={userAnswer === (optionIndex + 1).toString() }
-                      
-                      className="mr-4"
-                      disabled={showResults}
-                    />
+                  <input
+                              type="checkbox"
+                             name={`q${questionNumber}`}
+                              value={(optionIndex + 1).toString()}
+                              onChange={() =>
+                                handleAnswerChange(questionNumber, (optionIndex + 1).toString())
+                               
+                              }
+                              onClick={()=>{ setCurrentQuestionIndex(currentQuestionIndex + 1),setImageLoading(true)}}
+                              className="h-4 w-4 border-gray-300 hidden"
+                              disabled={showResults}
+                            />
+
                     {`${optionIndex + 1}. ${option}`}
                   </label>
                 </Card>
               ))}
             </div>
-            {showResults && isIncorrect && (
-              <div className="w-full flex flex-col items-center mt-4">
-                <Card className="w-full p-4 mb-2">
-                  Correct Answer:{" "}
-                  <span className="text-blue-500">
-                    {question.correctAnswer}
-                  </span>
-                </Card>
-                <p className="text-gray-400">
-                  Solution: {question.solution}
-                </p>
-              </div>
-            )}
+         
           </div>
         )}
       </div>
