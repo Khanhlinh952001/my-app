@@ -1,3 +1,4 @@
+'use client'
 import React, { useState, useEffect } from "react";
 import { Card } from "@mui/material";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
