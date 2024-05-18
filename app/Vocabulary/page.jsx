@@ -141,3 +141,33 @@ const VocabularyPage = () => {
 };
 
 export default VocabularyPage;
+
+
+// {showResults && isIncorrect && (
+//   <div className="w-10/12 mt-1 overflow-x-auto overflow-hidden flex space-x-1">
+//     {questions.map((question, questionIndex) => (
+//       <button
+//         key={questionIndex}
+//         className={`${
+//           answers[question.id]
+//             ? 'bg-green-500'
+//             : 'bg-[#b61e3b]'
+//         } border-[#b61e3b] border text-white rounded-md py-2 px-3 mx-1 cursor-pointer`}
+//         onClick={() => setCurrentQuestionIndex(questionIndex)}
+//       >
+//         {questionIndex + 1}
+//         <span
+//           className={`${
+//             answers[question.id] ===
+//             questions.find((q) => q.id === question.id)
+//               ?.correctAnswer
+//               ? 'bg-green-500'
+//               : 'bg-red-500'
+//           } text-white px-2 rounded font-normal`}
+//         >
+//           {answers[question.id]}
+//         </span>
+//       </button>
+//     ))}
+//   </div>
+// )}
