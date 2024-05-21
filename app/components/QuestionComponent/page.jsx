@@ -1,11 +1,11 @@
-'use client'
+"use client";
 import React, { useState, useEffect } from "react";
 import { Card } from "@mui/material";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import Button from "@mui/material/Button";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
-import CircularProgress from '@mui/material/CircularProgress';
+import CircularProgress from "@mui/material/CircularProgress";
 
 const QuestionsComponent = ({ questionsSet }) => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -58,14 +58,14 @@ const QuestionsComponent = ({ questionsSet }) => {
   const goToNextQuestion = () => {
     if (currentQuestionIndex < questions.length - 1) {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
-      setImageLoading(true);  // Set image loading state to true
+      setImageLoading(true); // Set image loading state to true
     }
   };
 
   const goToPreviousQuestion = () => {
     if (currentQuestionIndex > 0) {
       setCurrentQuestionIndex(currentQuestionIndex - 1);
-      setImageLoading(true);  // Set image loading state to true
+      setImageLoading(true); // Set image loading state to true
     }
   };
 
@@ -98,7 +98,7 @@ const QuestionsComponent = ({ questionsSet }) => {
           </span>
         </div>
         <Button onClick={handleSubmit} variant="contained" color="secondary">
-          Submit
+         Nộp bài 
         </Button>
       </div>
       <div className="flex flex-col items-center mt-20 w-full px-4">
@@ -107,6 +107,9 @@ const QuestionsComponent = ({ questionsSet }) => {
             <Card className="w-full p-4 mb-4">
               <h1 className="mb-4 text-gray-700 text-md">{question.type}</h1>
               {question.content ? (
+                <div>
+
+               
                 <div className="flex items-center justify-between">
                   <button
                     onClick={goToPreviousQuestion}
@@ -135,20 +138,10 @@ const QuestionsComponent = ({ questionsSet }) => {
                       }`}
                       onLoad={() => setImageLoading(false)} // Remove loading indicator when image is loaded
                     />
-                       {showResults && isIncorrect && (
-              <div className="w-full flex flex-col items-center mt-4">
-                <Card className="w-full p-4 mb-2">
-                 Correct Answer:{" "}
-                  <span className="text-blue-500">
-                    {question.correctAnswer}
-                  </span>
-                </Card>
-                <p className="text-gray-400">
-                  Solution: {question.solution}
-                </p>
-              </div>
-            )}
-                  </div>
+                   
+                  </div> 
+                  
+                  
                   <button
                     onClick={goToNextQuestion}
                     className={`w-10 h-10 flex items-center justify-center ${
@@ -161,7 +154,22 @@ const QuestionsComponent = ({ questionsSet }) => {
                     <ChevronRightIcon />
                   </button>
                 </div>
-              ) : (
+                <div>
+                    {showResults && isIncorrect && (
+                      <div className="w-full flex flex-col items-center mt-4">
+                        <Card className="w-full p-4 mb-2">
+                       Đáp án đúng:{" "}
+                          <span className="text-blue-500">
+                            {question.correctAnswer}
+                          </span>
+                        </Card>
+                        <p className="text-gray-400">
+                          Hướng dẫn : {question.solution}
+                        </p>
+                      </div>
+                    )}
+                  </div>
+              </div> ) : (
                 <div>Loading</div>
               )}
             </Card>
@@ -174,28 +182,37 @@ const QuestionsComponent = ({ questionsSet }) => {
                       ? "bg-green-500"
                       : "bg-green-200"
                   }`}
-               
                 >
-                  <label className={`w-full h-full flex items-center  pl-2 rounded ${userAnswer === (optionIndex + 1).toString() ? 'bg-green-700':''}`}>
-                  <input
-                              type="checkbox"
-                             name={`q${questionNumber}`}
-                              value={(optionIndex + 1).toString()}
-                              onChange={() =>
-                                handleAnswerChange(questionNumber, (optionIndex + 1).toString())
-                               
-                              }
-                              onClick={()=>{ setCurrentQuestionIndex(currentQuestionIndex + 1),setImageLoading(true)}}
-                              className="h-4 w-4 border-gray-300 hidden"
-                              disabled={showResults}
-                            />
+                  <label
+                    className={`w-full h-full flex items-center  pl-2 rounded ${
+                      userAnswer === (optionIndex + 1).toString()
+                        ? "bg-green-700"
+                        : ""
+                    }`}
+                  >
+                    <input
+                      type="checkbox"
+                      name={`q${questionNumber}`}
+                      value={(optionIndex + 1).toString()}
+                      onChange={() =>
+                        handleAnswerChange(
+                          questionNumber,
+                          (optionIndex + 1).toString()
+                        )
+                      }
+                      onClick={() => {
+                        setCurrentQuestionIndex(currentQuestionIndex + 1),
+                          setImageLoading(true);
+                      }}
+                      className="h-4 w-4 border-gray-300 hidden"
+                      disabled={showResults}
+                    />
 
                     {`${optionIndex + 1}. ${option}`}
                   </label>
                 </Card>
               ))}
             </div>
-         
           </div>
         )}
       </div>
