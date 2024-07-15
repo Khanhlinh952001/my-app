@@ -11,7 +11,7 @@ const TestingLayout = ({ children, scoreTrackingProps, selectedSet, answeredQues
       
       <div className="flex">
       
-          <div className="lg:md:w-2/12  bg-gray-100 mt-36 mr-1 lg:block md:block sm:hidden hiddenC">
+          <div className="lg:md:w-2/12  bg-gray-100 mt-36 mr-1 widthMD lg:block md:block sm:hidden hiddenC">
             <ScoreTracking {...scoreTrackingProps} />
           </div>
         
