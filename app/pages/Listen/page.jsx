@@ -170,7 +170,9 @@ const ListenTest = () => {
       answeredQuestions={answeredQuestions}
       selectedSet={selectedSet}
     >
+      
       <NotificationContainer />
+   
       <div className="lg:md:mt-32 sm:mt-40 bg-slate-200 w-full topSM">
         {questionsSet.map((question) => {
           const questionNumber = question.id;
@@ -186,16 +188,8 @@ const ListenTest = () => {
             >
               <QuestionContent question={question} questionNumber={questionNumber} />
 
-              <div className="left-0 top-20 absolute z-50">
-              {audio ? (
-              <audio controls className="h-8 mt-10" >
-                <source src={audio} type="audio/mp3" />
-                Your browser does not support the audio element.
-              </audio>
-            ) : (
-              <p>No audio available</p>
-            )}
-              </div>
+             <h1>ioihasdihas</h1>
+              
 
               <div className="my-4 flex justify-center items-center">
                 {question.options.map((option, index) => (
