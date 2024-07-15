@@ -6,10 +6,9 @@ import SetSelection from "../../components/SetSelection";
 import { AnswerComponent } from "../../components/AnswerComponent";
 import QuestionContent from "../../components/QuestionContent";
 import TestingLayout from "../../layouts/TestingLayout";
-import '../../styles/style.css'
+import '../../styles/style.css';
 import 'react-notifications/lib/notifications.css';
-import {NotificationContainer, NotificationManager} from 'react-notifications';
-import AudioPlayer from "../../components/AudioComponent";
+import { NotificationContainer, NotificationManager } from 'react-notifications';
 
 const ListenTest = () => {
   const [selectedSet, setSelectedSet] = useState(null);
@@ -21,7 +20,7 @@ const ListenTest = () => {
   const [showTracking, setShowTracking] = useState(true);
   const [score, setScore] = useState();
   const [timeLeft, setTimeLeft] = useState(3600);
-  const [audio, setAudio] = useState();
+  const [audio, setAudio] = useState('');
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -170,9 +169,14 @@ const ListenTest = () => {
       answeredQuestions={answeredQuestions}
       selectedSet={selectedSet}
     >
-      
       <NotificationContainer />
-   
+      {audio && (
+        <div className="left-0 top-0 absolute z-50">
+          <audio controls autoPlay className="h-8 mt-10">
+            <source src={audio} type="audio/mp3" />
+          </audio>
+        </div>
+      )}
       <div className="lg:md:mt-32 sm:mt-40 bg-slate-200 w-full topSM">
         {questionsSet.map((question) => {
           const questionNumber = question.id;
@@ -185,11 +189,8 @@ const ListenTest = () => {
               key={questionNumber}
               id={`question${questionNumber}`}
               className="mb-6 bg-slate-300 rounded-xl"
-            >
+            > 
               <QuestionContent question={question} questionNumber={questionNumber} />
-
-             <h1>ioihasdihas</h1>
-              
 
               <div className="my-4 flex justify-center items-center">
                 {question.options.map((option, index) => (
