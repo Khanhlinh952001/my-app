@@ -4,7 +4,7 @@ import { IoAccessibilityOutline } from "react-icons/io5";
 import { CgPlayListCheck } from "react-icons/cg";
 import { GoBook } from "react-icons/go";
 import { FaEarListen } from "react-icons/fa6";
-
+import './styles/style.css'
 import { CiPenpot } from "react-icons/ci";
 
 export default function Home() {
@@ -13,24 +13,19 @@ export default function Home() {
       <div className="bg-white ">
         {/* header */}
 
-        <div className="lg:h-[60px] bg-white border-b border-gray-300 ">
-          <div className="container flex flex-col lg:flex-row justify-between pb-2">
+        <div className="lg:h-[60px]  bg-white border-b border-gray-300 ">
+          <div className="container justify-between flex pb-2">
             {/* Logo */}
-            <div className="flex items-center lg:ml-20">
+            <div className="flex items-center ml-20">
               <img className="w-10 mt-2 h-10" src="logo.jpg" alt="logo" />
-              <h2 className="text-[#b61e3b] font-bold mt-4 ml-2">
+              <h2 className="text-[#b61e3b] font-bold mt-4 ml-2 lg:block md:sm:hidden hiddenC">
                 Tiếng Hàn Thu Huế
               </h2>
             </div>
 
             {/* Navigation Links */}
-            <div className="lg:flex lg:justify-center mt-4">
-              <h3 className="text-gray-800 text-lg hover:bg-[#b61e3b] hover:text-white px-3 py-1 h-8 mx-2 rounded">
-                Tự ôn luyện
-              </h3>
-              <h3 className="text-gray-800 text-lg hover:bg-[#b61e3b] hover:text-white px-3 py-1 h-8 mx-2 rounded">
-                Ôn cùng nhau
-              </h3>
+            <div className="flex justify-center mt-4 mr-20">
+             
               <Link href="/Listen">
                 <h3 className="text-gray-800 text-lg hover:bg-[#b61e3b] hover:text-white px-3 pt-1 h-8 mx-2 rounded">
                   Kiểm tra nghe
@@ -44,7 +39,7 @@ export default function Home() {
             </div>
 
             {/* Auth Buttons */}
-            <div className="lg:flex items-center mt-4">
+            <div className="lg:flex items-center mt-4 sm:md:hidden hiddenC">
               <button className="text-[#b61e3b] mx-2">Đăng ký</button>
               <button className="text-white bg-[#b61e3b] px-2 rounded-xl">
                 Đăng nhập
@@ -61,7 +56,7 @@ export default function Home() {
           {/*  */}
           <div>
          
-            <h1 className="text-[#b61e3b] sm:mt-32 md:mt-32 lg:mt-60 text-3xl text-center ">
+            <h1 className="text-[#b61e3b] sm:mt-36 topSM md:mt-32 lg:mt-60 text-3xl text-center ">
               Ôn thi chứng chỉ Topik hiệu quả
             </h1>
             <p className="text-gray-800 mt-2 text-lg sm:px-5 md:px-5">
