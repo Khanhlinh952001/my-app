@@ -26,14 +26,19 @@ export default function Home() {
             {/* Navigation Links */}
             <div className="flex justify-center mt-4 mr-20">
              
-              <Link href="/Listen">
+              <Link href="/pages/Listen">
                 <h3 className="text-gray-800 text-lg hover:bg-[#b61e3b] hover:text-white px-3 pt-1 h-8 mx-2 rounded">
                   Kiểm tra nghe
                 </h3>
               </Link>
-              <Link href="/Reading">
+              <Link href="/pages/Reading">
                 <h3 className="text-gray-800 text-lg hover:bg-[#b61e3b] hover:text-white px-3 py-1 h-8 mx-2 rounded">
                   Kiểm tra đọc
+                </h3>
+              </Link>
+              <Link href="/pages/ConnectWord">
+                <h3 className="text-gray-800 text-lg hover:bg-[#b61e3b] hover:text-white px-3 py-1 h-8 mx-2 rounded">
+                  Game
                 </h3>
               </Link>
             </div>

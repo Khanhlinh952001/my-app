@@ -1,15 +1,15 @@
 'use client'
 import React, { useState, useEffect } from "react";
 import { Card } from "@mui/material";
-import Listen from "../../json/Listen.json";
-import SetSelection from "../components/SetSelection";
-import { AnswerComponent } from "../components/AnswerComponent";
-import QuestionContent from "../components/QuestionContent";
-import TestingLayout from "../layouts/TestingLayout";
-import '../styles/style.css'
+import Listen from "../../../json/Listen.json";
+import SetSelection from "../../components/SetSelection";
+import { AnswerComponent } from "../../components/AnswerComponent";
+import QuestionContent from "../../components/QuestionContent";
+import TestingLayout from "../../layouts/TestingLayout";
+import '../../styles/style.css'
 import 'react-notifications/lib/notifications.css';
 import {NotificationContainer, NotificationManager} from 'react-notifications';
-import AudioPlayer from "../components/AudioComponent";
+import AudioPlayer from "../../components/AudioComponent";
 
 const ListenTest = () => {
   const [selectedSet, setSelectedSet] = useState(null);
@@ -186,7 +186,16 @@ const ListenTest = () => {
             >
               <QuestionContent question={question} questionNumber={questionNumber} />
 
-              {audio && <AudioPlayer audio={audio} />}
+              <div className="left-0 top-20 absolute z-50">
+              {audio ? (
+              <audio controls className="h-8 mt-10" >
+                <source src={audio} type="audio/mp3" />
+                Your browser does not support the audio element.
+              </audio>
+            ) : (
+              <p>No audio available</p>
+            )}
+              </div>
 
               <div className="my-4 flex justify-center items-center">
                 {question.options.map((option, index) => (

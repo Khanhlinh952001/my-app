@@ -16,6 +16,7 @@
     "@mui/icons-material": "^5.15.17",
     "@mui/material": "^5.15.17",
     "@mui/styled-engine-sc": "^6.0.0-alpha.18",
+    "axios": "^1.7.2",
     "canvas": "^2.11.2",
     "firebase": "^10.8.0",
     "json-server": "^1.0.0-alpha.23",

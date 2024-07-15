@@ -1,12 +1,12 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { Card } from "@mui/material";
-import Reading from "../../json/Reading.json";
-import SetSelection from "../components/SetSelection";
-import { AnswerComponent } from "../components/AnswerComponent";
-import QuestionContent from "../components/QuestionContent";
-import TestingLayout from "../layouts/TestingLayout";
-import '../styles/style.css'
+import Reading from "../../../json/Reading.json";
+import SetSelection from "../../components/SetSelection";
+import { AnswerComponent } from "../../components/AnswerComponent";
+import QuestionContent from "../../components/QuestionContent";
+import TestingLayout from "../../layouts/TestingLayout";
+import '../../styles/style.css'
 import 'react-notifications/lib/notifications.css';
 import {NotificationContainer, NotificationManager} from 'react-notifications';
 
