@@ -7,6 +7,9 @@ import { AnswerComponent } from "../components/AnswerComponent";
 import QuestionContent from "../components/QuestionContent";
 import TestingLayout from "../layouts/TestingLayout";
 import '../styles/style.css'
+import 'react-notifications/lib/notifications.css';
+import {NotificationContainer, NotificationManager} from 'react-notifications';
+
 const ReadingTest = () => {
   const [selectedSet, setSelectedSet] = useState(null);
   const [answers, setAnswers] = useState({});
@@ -106,8 +109,9 @@ const ReadingTest = () => {
     });
 
     const scores = calculateScore();
-    alert(scores);
+    
     setScore(scores);
+    NotificationManager.success(`Số điểm của bạn là ${scores}`, 'Kết quả');
   };
 
   const handleJumpToQuestion = (questionNumber) => {
@@ -135,6 +139,7 @@ const ReadingTest = () => {
     answeredQuestions={answeredQuestions}
     selectedSet={selectedSet}
   >
+    <NotificationContainer />
       <div className=" lg:md:mt-32 sm:mt-40 bg-slate-200 w-full topSM">
         {questionsSet.map((question) => {
           const questionNumber = question.id;

@@ -6,12 +6,15 @@ import { Card } from "@mui/material";
 import QuestionContent from "../components/QuestionContent";
 import TestingLayout from "../layouts/TestingLayout";
 import { AnswerComponent } from "../components/AnswerComponent";
+import 'react-notifications/lib/notifications.css';
+import {NotificationContainer, NotificationManager} from 'react-notifications';
+
 const SetSelection = ({ onSelectSet }) => {
   const [selectedSet, setSelectedSet] = useState(1);
 
   return (
     <div>
-    
+       
       <div className="bg-[#e1e8f0] h-screen lg:block text-align">
         <div className="flex justify-center  items-center h-full ">
           <div className="bg-white p-8 rounded">
@@ -183,7 +186,9 @@ const ListenTest = () => {
 
     const scores = calculateScore();
     setScore(scores);
+    
     setIsCorrect(incorrectQuestions.length === 0);
+    NotificationManager.success(`Số điểm của bạn là ${scores}`, 'Kết quả');
   };
 
   const handleJumpToQuestion = (questionNumber) => {
@@ -214,6 +219,7 @@ const ListenTest = () => {
       selectedSet={selectedSet}
       answeredQuestions={answeredQuestions}
     >
+      <NotificationContainer/>
       <div>
         <div className="lg:hidden md:block sm:block   bg-[#e1e8f0] text-center">
           {/* <QuestionsComponent questionsSet={questionsSet} /> */}

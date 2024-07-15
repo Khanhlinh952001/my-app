@@ -13,7 +13,7 @@ const Header = ({ selectedSet, answeredQuestions, handleSubmit, score }) => {
           <h3 className="block lg:md:text-2xl sm:text-lg font-medium mt-1 mr-2 text-gray-700">
             {selectedSet === 1 ? "83" : selectedSet - 1} 제회
           </h3>
-          {score && <h1 className="text-xl font-bold">{score}</h1>}
+          {score && <h1 className="text-2xl text-green-500 font-bold ">{score}</h1>}
         </div>
       </div>
 
@@ -47,16 +47,13 @@ const Header = ({ selectedSet, answeredQuestions, handleSubmit, score }) => {
             </Typography>
           </Box>
         </Box>
-        {
-          !score && (
-            <button
-          className=" absolute bg-blue-600 text-white text-xs w-10"
+        
+        <button
+          className={`absolute bg-blue-600 text-white text-xs w-10 ${score ? 'hidden':''} `}
           onClick={handleSubmit}
         >
           Kiểm Tra
         </button>
-  )
-        }
         
       </div>
     </Card>
