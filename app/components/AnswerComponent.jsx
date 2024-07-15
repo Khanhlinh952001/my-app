@@ -1,6 +1,6 @@
 "use client";
 import React from 'react'
-
+import '../styles/style.css';
 export const AnswerComponent = ({
   option,
   optionIndex,
@@ -13,7 +13,7 @@ export const AnswerComponent = ({
   const isSelected = userAnswer === (optionIndex + 1).toString();
   const isCorrect = correctAnswer === (optionIndex + 1).toString();
   const labelClassNames = `
-    block mb-2 px-10 border py-1 rounded-lg mx-2 text-gray-700 text-xl 
+    block mb-2 lg:md:px-10 sm:px-4 pxSM border py-1 rounded-lg mx-2 text-gray-700 text-xl 
     ${isSelected ? (showResults ? (isCorrect ? "bg-green-500 text-white" : "bg-red-500 text-white") : "bg-green-500") : ""}
   `;
 

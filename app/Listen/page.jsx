@@ -11,19 +11,7 @@ const SetSelection = ({ onSelectSet }) => {
 
   return (
     <div>
-      {/* <div className="lg:items-center lg:justify-center h-screen lg:hidden bg-[#e1e8f0] text-center">
-        <div className="p-8">
-          <h1 className="text-gray-800 text-lg mb-10">
-            Trang web hiện chưa cập nhật trên di động
-          </h1>
-          <Link href="/">
-            <button className="bg-[#b61e3b] hover:bg-[#b61e3b] text-white font-bold py-2 px-4 rounded">
-              Trở lại
-            </button>
-          </Link>
-        </div>
-      </div> */}
-
+    
       <div className="bg-[#e1e8f0] h-screen lg:block text-align">
         <div className="flex justify-center  items-center h-full ">
           <div className="bg-white p-8 rounded">
@@ -59,7 +47,7 @@ const SetSelection = ({ onSelectSet }) => {
   );
 };
 
-const TestPage = () => {
+const ListenTest = () => {
   const [expanded, setExpanded] = useState(false);
   const [answers, setAnswers] = useState({});
   const [answeredQuestions, setAnsweredQuestions] = useState([]);
@@ -230,10 +218,10 @@ const TestPage = () => {
         <div className="lg:hidden md:block sm:block   bg-[#e1e8f0] text-center">
           {/* <QuestionsComponent questionsSet={questionsSet} /> */}
         </div>
-        <div >
+        <div>
           {/* right */}
           <div>
-            <div className=" right-0  absolute">
+            <div className="right-0 top-0 absolute z-50 w-36">
               {audio ? (
                 <audio controls autoPlay>
                   <source src={audio} type="audio/mp3" />
@@ -307,4 +295,4 @@ const TestPage = () => {
   );
 };
 //
-export default TestPage;
+export default ListenTest;

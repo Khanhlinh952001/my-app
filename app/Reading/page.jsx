@@ -6,8 +6,8 @@ import SetSelection from "../components/SetSelection";
 import { AnswerComponent } from "../components/AnswerComponent";
 import QuestionContent from "../components/QuestionContent";
 import TestingLayout from "../layouts/TestingLayout";
-
-const TestPage = () => {
+import '../styles/style.css'
+const ReadingTest = () => {
   const [selectedSet, setSelectedSet] = useState(null);
   const [answers, setAnswers] = useState({});
   const [answeredQuestions, setAnsweredQuestions] = useState([]);
@@ -130,13 +130,12 @@ const TestPage = () => {
       handleSubmit,
       score,
       showResults,
-    
       questions
     }}
     answeredQuestions={answeredQuestions}
     selectedSet={selectedSet}
   >
-      <div className=" lg:md:mt-32 sm:mt-40 bg-slate-200">
+      <div className=" lg:md:mt-32 sm:mt-40 bg-slate-200 w-full topSM">
         {questionsSet.map((question) => {
           const questionNumber = question.id;
           const userAnswer = answers[questionNumber];
@@ -191,5 +190,5 @@ const TestPage = () => {
   );
 };
 
-export default TestPage;
+export default ReadingTest;
 

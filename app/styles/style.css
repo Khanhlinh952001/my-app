@@ -1,0 +1,16 @@
+@media (max-width: 640px) {
+.hiddenC {
+display: none;
+}
+.pxSM{
+    padding-right: 8px;
+    padding-left: 8px;
+}
+.layoutSM{
+    width: 100%;
+}
+
+.topSM{
+    margin-top: 120px;
+}
+}
