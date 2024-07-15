@@ -1,77 +1,28 @@
-"use client";
+'use client'
 import React, { useState, useEffect } from "react";
-import Listen from "../../json/Listen.json";
-import Link from "next/link";
 import { Card } from "@mui/material";
+import Listen from "../../json/Listen.json";
+import SetSelection from "../components/SetSelection";
+import { AnswerComponent } from "../components/AnswerComponent";
 import QuestionContent from "../components/QuestionContent";
 import TestingLayout from "../layouts/TestingLayout";
-import { AnswerComponent } from "../components/AnswerComponent";
+import '../styles/style.css'
 import 'react-notifications/lib/notifications.css';
 import {NotificationContainer, NotificationManager} from 'react-notifications';
-
-const SetSelection = ({ onSelectSet }) => {
-  const [selectedSet, setSelectedSet] = useState(1);
-
-  return (
-    <div>
-       
-      <div className="bg-[#e1e8f0] h-screen lg:block text-align">
-        <div className="flex justify-center  items-center h-full ">
-          <div className="bg-white p-8 rounded">
-            <h1 className="text-3xl font-bold mb-4 text-black mx-4">
-              Chọn Bộ Đề Trước Khi Thi
-            </h1>
-            <div className="flex justify-around">
-              <select
-                className="border rounded-md text-gray-700 h-10 mt-8 bg-slate-300 p-2"
-                onChange={(e) => onSelectSet(Number(e.target.value))}
-              >
-                <option value={1}>Bộ đề 83</option>
-                <option value={2}>Bộ đề 1</option>
-                <option value={3}>Bộ đề 2</option>
-                <option value={4}>Bộ đề 3</option>
-                <option value={5}>Bộ đề 4</option>
-                <option value={6}>Bộ đề 5</option>
-                <option value={7}>Bộ đề 6</option>
-                <option value={8}>Bộ đề 7</option>
-                <option value={9}>Bộ đề 91</option>
-              </select>
-              <button
-                className="bg-blue-500 text-white px-6 py-3 rounded mt-4 ml-8"
-                onClick={() => onSelectSet(selectedSet)}
-              >
-                Bắt đầu Thi
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
+import AudioPlayer from "../components/AudioComponent";
 
 const ListenTest = () => {
-  const [expanded, setExpanded] = useState(false);
+  const [selectedSet, setSelectedSet] = useState(null);
   const [answers, setAnswers] = useState({});
   const [answeredQuestions, setAnsweredQuestions] = useState([]);
   const [showResults, setShowResults] = useState(false);
-  const [isCorrect, setIsCorrect] = useState(false);
   const [questionsSet, setQuestionsSet] = useState([]);
-  const [selectedSet, setSelectedSet] = useState(null);
-
   const [questions, setQuestions] = useState([]);
   const [showTracking, setShowTracking] = useState(true);
-  const [audio, setAudio] = useState();
   const [score, setScore] = useState();
   const [timeLeft, setTimeLeft] = useState(3600);
+  const [audio, setAudio] = useState();
 
-  const formatTime = (seconds) => {
-    const minutes = Math.floor(seconds / 60);
-    const remainingSeconds = seconds % 60;
-    return `${minutes.toString().padStart(2, "0")}:${remainingSeconds
-      .toString()
-      .padStart(2, "0")}`;
-  };
   useEffect(() => {
     const timer = setInterval(() => {
       setTimeLeft((prevTimeLeft) => prevTimeLeft - 1);
@@ -137,6 +88,10 @@ const ListenTest = () => {
         );
         break;
       default:
+        setQuestionsSet(Listen.Listen83);
+        setAudio(
+          "https://firebasestorage.googleapis.com/v0/b/upload-9ece2.appspot.com/o/Listen83%2F%5BLISTENING%20TOPIK%2083%5D%20TOPIK%20%E1%84%83%E1%85%B3%E1%86%AE%E1%84%80%E1%85%B5%2083%E1%84%92%E1%85%AC%20_%20%E1%84%92%E1%85%A1%E1%86%AB%E1%84%80%E1%85%AE%E1%86%A8%E1%84%8B%E1%85%A5%E1%84%82%E1%85%B3%E1%86%BC%E1%84%85%E1%85%A7%E1%86%A8%E1%84%89%E1%85%B5%E1%84%92%E1%85%A5%E1%86%B7%20%E1%84%83%E1%85%B3%E1%86%AE%E1%84%80%E1%85%B5%20%E1%84%8C%E1%85%B5%E1%84%86%E1%85%AE%E1%86%AB%20-%20BA%CC%80I%20NGHE%20TOPIK%20II%20ke%CC%80m%20phu%CC%A3%20%C4%91e%CC%82%CC%80.mp3?alt=media&token=0f332054-0c96-42ed-ba28-7bd54b68d23b"
+        );
         break;
     }
   }, [selectedSet]);
@@ -185,9 +140,8 @@ const ListenTest = () => {
     });
 
     const scores = calculateScore();
-    setScore(scores);
     
-    setIsCorrect(incorrectQuestions.length === 0);
+    setScore(scores);
     NotificationManager.success(`Số điểm của bạn là ${scores}`, 'Kết quả');
   };
 
@@ -200,8 +154,6 @@ const ListenTest = () => {
     return <SetSelection onSelectSet={setSelectedSet} />;
   }
 
-  console.log(audio);
-
   return (
     <TestingLayout
       scoreTrackingProps={{
@@ -213,92 +165,67 @@ const ListenTest = () => {
         handleSubmit,
         score,
         showResults,
-        answeredQuestions,
-        questions,
+        questions
       }}
-      selectedSet={selectedSet}
       answeredQuestions={answeredQuestions}
+      selectedSet={selectedSet}
     >
-      <NotificationContainer/>
-      <div>
-        <div className="lg:hidden md:block sm:block   bg-[#e1e8f0] text-center">
-          {/* <QuestionsComponent questionsSet={questionsSet} /> */}
-        </div>
-        <div>
-          {/* right */}
-          <div>
-            <div className="right-0 top-0 absolute z-50 w-36">
-              {audio ? (
-                <audio controls autoPlay>
-                  <source src={audio} type="audio/mp3" />
-                  Your browser does not support the audio element.
-                </audio>
-              ) : (
-                <p>No audio available</p>
+      <NotificationContainer />
+      <div className="lg:md:mt-32 sm:mt-40 bg-slate-200 w-full topSM">
+        {questionsSet.map((question) => {
+          const questionNumber = question.id;
+          const userAnswer = answers[questionNumber];
+          const isIncorrect =
+            userAnswer && userAnswer !== question.correctAnswer;
+
+          return (
+            <Card
+              key={questionNumber}
+              id={`question${questionNumber}`}
+              className="mb-6 bg-slate-300 rounded-xl"
+            >
+              <QuestionContent question={question} questionNumber={questionNumber} />
+
+              {audio && <AudioPlayer audio={audio} />}
+
+              <div className="my-4 flex justify-center items-center">
+                {question.options.map((option, index) => (
+                  <AnswerComponent
+                    key={index}
+                    option={option}
+                    optionIndex={index}
+                    questionNumber={questionNumber}
+                    handleAnswerChange={(qn, selectedAnswer) =>
+                      handleAnswerChange(qn, selectedAnswer)
+                    }
+                    userAnswer={userAnswer}
+                    correctAnswer={question.correctAnswer}
+                    showResults={showResults}
+                  />
+                ))}
+              </div>
+
+              {showResults && isIncorrect && (
+                <div className="flex mb-2 justify-center">
+                  <div>
+                    <Card className="flex justify-center mb-1">
+                      Đáp án đúng:{" "}
+                      <span className="text-xl ml-1 text-blue-500">
+                        {question.correctAnswer}
+                      </span>
+                    </Card>
+                    <p className="text-gray-400 text-md">
+                      Hướng dẫn giải: {question.solution}
+                    </p>
+                  </div>
+                </div>
               )}
-            </div>
-
-            <div className="questions-list mx-4 mt-36 rounded-md">
-              {questionsSet.map((question) => {
-                const questionNumber = question.id;
-                const userAnswer = answers[questionNumber];
-                const isIncorrect =
-                  userAnswer && userAnswer !== question.correctAnswer;
-
-                return (
-                  <Card
-                    key={questionNumber}
-                    id={`question${questionNumber}`}
-                    className="mb-6 bg-slate-300 rounded-xl"
-                  >
-                    <QuestionContent
-                      question={question}
-                      questionNumber={questionNumber}
-                    />
-
-                    <div className="my-4 flex justify-center items-center">
-                      {question.options.map((option, index) => (
-                        <AnswerComponent
-                          key={index}
-                          option={option}
-                          optionIndex={index}
-                          questionNumber={questionNumber}
-                          handleAnswerChange={(qn, selectedAnswer) =>
-                            handleAnswerChange(qn, selectedAnswer)
-                          }
-                          userAnswer={userAnswer}
-                          correctAnswer={question.correctAnswer}
-                          showResults={showResults}
-                        />
-                      ))}
-                    </div>
-
-                    {showResults && isIncorrect && (
-                      <div className="flex mb-2 justify-center">
-                        <div>
-                          <Card className="flex justify-center mb-1">
-                            Đáp án đúng:{" "}
-                            <span className="text-xl ml-1 text-blue-500">
-                              {question.correctAnswer}
-                            </span>
-                          </Card>
-                          <p className="text-gray-400 text-md">
-                            Hướng dẫn giải: {question.solution}
-                          </p>
-                        </div>
-                      </div>
-                    )}
-                  </Card>
-                );
-              })}
-            </div>
-
-            <div className="w-screen flex justify-end "></div>
-          </div>
-        </div>
+            </Card>
+          );
+        })}
       </div>
     </TestingLayout>
   );
 };
-//
+
 export default ListenTest;
