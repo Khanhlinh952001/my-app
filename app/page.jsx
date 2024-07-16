@@ -16,7 +16,7 @@ export default function Home() {
         <div className="lg:h-[60px]  bg-white border-b border-gray-300 ">
           <div className="container justify-between flex pb-2">
             {/* Logo */}
-            <div className="flex items-center ml-20">
+            <div className="flex items-center ml-5">
               <img className="w-10 mt-2 h-10" src="logo.jpg" alt="logo" />
               <h2 className="text-[#b61e3b] font-bold mt-4 ml-2 lg:block md:sm:hidden hiddenC">
                 Tiếng Hàn Thu Huế
@@ -24,7 +24,7 @@ export default function Home() {
             </div>
 
             {/* Navigation Links */}
-            <div className="flex justify-center mt-4 mr-20">
+            <div className="flex justify-center mt-4 mr-5">
              
               <Link href="/pages/Listen">
                 <h3 className="text-gray-800 text-lg fontSM hover:bg-[#b61e3b] hover:text-white px-3 pt-1 h-8 mx-2 rounded">
