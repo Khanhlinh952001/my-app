@@ -1,6 +1,7 @@
 import React, { useRef, useState } from 'react';
 import '../styles/style.css';  // Đảm bảo bạn đã import file CSS
-
+import { IoIosPause } from "react-icons/io";
+import { FaPlay } from "react-icons/fa";
 const AudioPlayer = ({ audio }) => {
   const audioRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -15,7 +16,7 @@ const AudioPlayer = ({ audio }) => {
   };
 
   return (
-    <div className="left-0 top-20 absolute z-50">
+    <div className="right-4 bottom-5 fixed z-50">
       {audio ? (
         <div>
           <audio ref={audioRef}>
@@ -23,10 +24,10 @@ const AudioPlayer = ({ audio }) => {
             Your browser does not support the audio element.
           </audio>
           <button
-            className="bg-blue-600 text-white text-xs w-20 p-2 mt-2"
+            className="bg-blue-600 text-white text-xl p-3 rounded-full"
             onClick={handlePlayPause}
           >
-            {isPlaying ? 'Pause' : 'Play'}
+            {isPlaying ? <IoIosPause/> : <FaPlay className='text-md'/>}
           </button>
         </div>
       ) : (

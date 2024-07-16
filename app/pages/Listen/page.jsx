@@ -9,7 +9,7 @@ import TestingLayout from "../../layouts/TestingLayout";
 import '../../styles/style.css';
 import 'react-notifications/lib/notifications.css';
 import { NotificationContainer, NotificationManager } from 'react-notifications';
-
+import AudioPlayer from "@/app/components/AudioComponent";
 const ListenTest = () => {
   const [selectedSet, setSelectedSet] = useState(null);
   const [answers, setAnswers] = useState({});
@@ -171,11 +171,7 @@ const ListenTest = () => {
     >
       <NotificationContainer />
       {audio && (
-        <div className="left-0 top-0 absolute z-50">
-          <audio controls autoPlay className="h-8 mt-10">
-            <source src={audio} type="audio/mp3" />
-          </audio>
-        </div>
+       <AudioPlayer audio={audio} />
       )}
       <div className="lg:md:mt-32 sm:mt-40 bg-slate-200 w-full topSM">
         {questionsSet.map((question) => {

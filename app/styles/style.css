@@ -18,19 +18,4 @@ display: none;
 @media (min-width: 670px) and (max-width: 1024px) {
   .widthMD{width: 220px;} 
   }
-/* styles.css */
 
-/* Ẩn các điều khiển mặc định của audio */
-audio::-webkit-media-controls {
-    display: none !important;
-  }
-  audio::-webkit-media-controls-panel {
-    display: none !important;
-  }
-  audio::-webkit-media-controls-play-button {
-    display: block !important;
-  }
-  audio::-webkit-media-controls-start-playback-button {
-    display: none !important;
-  }
-  
