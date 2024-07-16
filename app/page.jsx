@@ -68,10 +68,11 @@ export default function Home() {
               Bạn sẽ nhanh chóng cải thiện kỹ năng làm bài thi của mình chỉ
               trong 3 tuần
             </p>
-            
-                <button className="text-white bg-[#b61e3b] hover:bg-[#e9b0bb] px-6 py-3 rounded-3xl mt-4 ml-52">
+            <Link href={'/pages/Select'}>
+            <button className="text-white bg-[#e5441a] hover:bg-[#e5441a] px-6 py-3 rounded-3xl mt-4 ml-52">
               Bắt đầu ngay
             </button>
+            </Link>
            
             
           </div>
